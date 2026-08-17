@@ -1,0 +1,50 @@
+.sala{
+    background-image: url(../imagens/fundo/sala.png);
+}
+
+
+.qt_cellbit{
+   background-image: url(../imagens/fundo/qt_cellbit.png);
+   
+}
+
+.qt_protagonista{
+       background-image: url(../imagens/fundo/qt_cellbit.png);
+
+}
+
+.piscina{
+    background-image: url(../imagens/fundo/piscina.png);
+    
+ }
+
+ .mansão{
+    background-image: url(../imagens/Fundo/fundo_casa2.png);  
+}
+
+.fundo_casa{
+    background-image: url(../imagens/fundo_casa.png);
+}
+
+.cozinha{
+        background-image: url(../imagens/Fundo/cozinha.png);
+
+}
+
+.cenaNome{
+    background-image: url(../imagens/fundo/cenas/cena0.png);
+ 
+}
+
+.qt_spok{
+    background-image: url(../imagens/Fundo/qt_spok.png);
+
+}
+
+.balada{
+    background-image: url(../imagens/Fundo/balada.png);
+}
+
+.fundopreto{
+    background-color: black;
+}

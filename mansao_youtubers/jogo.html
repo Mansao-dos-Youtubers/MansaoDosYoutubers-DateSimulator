@@ -1,0 +1,2571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mansão dos youtubers</title>
+    <link rel="stylesheet" href="css_youtubers.css">
+    <link rel="stylesheet" href="itens.css">
+    <link rel="stylesheet" href="fundo.css">
+</head>
+
+<body>
+    <audio autoplay loop hidden> <source src="../audio/Minecraft - C418 (youtube).mp3" type="audio/mp3"> </audio>
+    <div id="container">
+        <div id="loja">
+            <div id="dinheiro">
+                <img style="width: 150px; height: 150px; margin-left: -20px;" src="../imagens/dinheiro.png"
+                    alt="dinheiro">
+                <span id="moedas"></span>
+            </div>
+            <div style="height: 50px;">
+                <h1 style="padding-top: 3px;">Loja</h1>
+            </div>
+            <div class="fileira">
+                <div class="itens">
+                    <button id="capacete" onclick="comprarCapacete()"></button>
+                    <div id="infoCapacete" class="infoItem">
+                        <strong>Capacete Encantado</strong><br><br>
+                        <p style="color: #8A888A;">Quando equipado:</p>
+                        <p style="color: #5252F6;">+2 em todos os atributos</p>
+                    </div>
+                </div>
+                <div class="itens">
+                    <button id="botas" onclick="comprarBotas()"></button>
+                    <div id="infoBotas" class="infoItem">
+                        <strong>Botas Encantadas</strong><br><br>
+                        <p style="color: #8A888A;">Quando equipadas:</p>
+                        <p style="color: #5252F6;">+2 em todos os atributos</p>
+                    </div>
+                </div>
+            </div>
+            <div class="fileira">
+                <div class="itens">
+                    <button id="calças" onclick="comprarCalcas()"></button>
+                    <div id="infoCalcas" class="infoItem">
+                        <strong>Calças Encantadas</strong><br><br>
+                        <p style="color: #8A888A;">Quando equipadas:</p>
+                        <p style="color: #5252F6;">+3 em todos os atributos</p>
+                    </div>
+                </div>
+
+                <div class="itens">
+                    <button id="peitoral" onclick="comprarPeitoral()"></button>
+                    <div id="infoPeitoral" class="infoItem">
+                        <strong>Peitoral Encantado</strong><br><br>
+                        <p style="color: #8A888A;">Quando equipado:</p>
+                        <p style="color: #5252F6;">+5 em todos os atributos</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="fileira">
+                <div class="itens">
+                    <button id="porco" onclick="comprarPorco()"></button>
+                    <div id="infoPorco" class="infoItem">
+                        <strong>Porco</strong><br><br>
+                        <p style="color: #8A888A;">Quando comprado:</p>
+                        <p style="color: #5252F6;">+10 em todos os atributos</p>
+                    </div>
+                </div>
+                <div class="itens">
+                    <button id="zumbi" onclick="comprarZumbi()"></button>
+                    <div id="infoJockey" class="infoItem">
+                        <strong>Chicken Jockey</strong><br><br>
+                        <p style="color: #8A888A;">Quando comprado:</p>
+                        <p style="color: #5252F6;">+20 em todos os atributos</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <button id="log" onclick="abrirLog()">Log</button>
+        </div>
+
+
+        <div id="atualmente">
+
+        </div>
+
+        <div id="atualmente2">
+            <div class="statusp">
+
+                <div class="atributos">
+                    <img class="Pmen" src="../imagens/Personagens/Febatista.png" alt="febatista">
+
+                    <div class="atu">
+                        <p>Afeto: <span id="afeto1"></span></p>
+                        <div class="barra-container">
+                            <div class="barra" id="barraAfeto1"></div>
+                        </div>
+
+                        <p>Confiança: <span id="confianca1"></span></p>
+                        <div class="barra-container">
+                            <div class="barra" id="barraConfianca1"></div>
+                        </div>
+
+                        <p>Interesse: <span id="interesse1"></span></p>
+                        <div class="barra-container">
+                            <div class="barra" id="barraInteresse1"></div>
+                        </div>
+
+                        <p>Quimica: <span id="quimica1"></span></p>
+                        <div class="barra-container">
+                            <div class="barra" id="barraQuimica1"></div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="atributos">
+
+                    <img class="Pmen" src="../imagens/Personagens/Cellbit.png" alt="febatista">
+                    <div class="atu">
+                        <p>Afeto: <span id="afeto2"></span></p>
+                        <div class="barra-container">
+                            <div class="barra" id="barraAfeto2"></div>
+                        </div>
+
+                        <p>Confiança: <span id="confianca2"></span></p>
+                        <div class="barra-container">
+                            <div class="barra" id="barraConfianca2"></div>
+                        </div>
+
+                        <p>Interesse: <span id="interesse2"></span></p>
+                        <div class="barra-container">
+                            <div class="barra" id="barraInteresse2"></div>
+                        </div>
+
+                        <p>Quimica: <span id="quimica2"></span></p>
+                        <div class="barra-container">
+                            <div class="barra" id="barraQuimica2"></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="statusp">
+                <div class="atributos">
+                    <img class="Pmen" src="../imagens/Personagens/Authentic.png" alt="febatista">
+                    <div class="atu">
+                        <p>Afeto: <span id="afeto3"></span></p>
+                        <div class="barra-container">
+                            <div class="barra" id="barraAfeto3"></div>
+                        </div>
+
+                        <p>Confiança: <span id="confianca3"></span></p>
+                        <div class="barra-container">
+                            <div class="barra" id="barraConfianca3"></div>
+                        </div>
+
+                        <p>Interesse: <span id="interesse3"></span></p>
+                        <div class="barra-container">
+                            <div class="barra" id="barraInteresse3"></div>
+                        </div>
+
+                        <p>Quimica: <span id="quimica3"></span></p>
+                        <div class="barra-container">
+                            <div class="barra" id="barraQuimica3"></div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="atributos">
+                    <img class="Pmen" src="../imagens/Personagens/Felps.png" alt="febatista">
+
+                    <div class="atu">
+
+                        <p>Afeto: <span id="afeto4"></span></p>
+                        <div class="barra-container">
+                            <div class="barra" id="barraAfeto4"></div>
+                        </div>
+
+                        <p>Confiança: <span id="confianca4"></span></p>
+                        <div class="barra-container">
+                            <div class="barra" id="barraConfianca4"></div>
+                        </div>
+
+                        <p>Interesse: <span id="interesse4"></span></p>
+                        <div class="barra-container">
+                            <div class="barra" id="barraInteresse4"></div>
+                        </div>
+
+                        <p>Quimica: <span id="quimica4"></span></p>
+                        <div class="barra-container">
+                            <div class="barra" id="barraQuimica4"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="statusp">
+                <div class="atributos">
+                    <img class="Pmen" src="../imagens/Personagens/Jazzghost.png" alt="febatista">
+
+                    <div class="atu">
+                        <p>Afeto: <span id="afeto5"></span></p>
+                        <div class="barra-container">
+                            <div class="barra" id="barraAfeto5"></div>
+                        </div>
+
+                        <p>Confiança: <span id="confianca5"></span></p>
+                        <div class="barra-container">
+                            <div class="barra" id="barraConfianca5"></div>
+                        </div>
+
+                        <p>Interesse: <span id="interesse5"></span></p>
+                        <div class="barra-container">
+                            <div class="barra" id="barraInteresse5"></div>
+                        </div>
+
+                        <p>Quimica: <span id="quimica5"></span></p>
+                        <div class="barra-container">
+                            <div class="barra" id="barraQuimica5"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="atributos">
+                    <img class="Pmen" src="../imagens/Personagens/Malena.png" alt="febatista">
+                    <div class="atu">
+                        <p>Afeto: <span id="afeto6"></span></p>
+                        <div class="barra-container">
+                            <div class="barra" id="barraAfeto6"></div>
+                        </div>
+
+                        <p>Confiança: <span id="confianca6"></span></p>
+                        <div class="barra-container">
+                            <div class="barra" id="barraConfianca6"></div>
+                        </div>
+
+                        <p>Interesse: <span id="interesse6"></span></p>
+                        <div class="barra-container">
+                            <div class="barra" id="barraInteresse6"></div>
+                        </div>
+
+                        <p>Quimica: <span id="quimica6"></span></p>
+                        <div class="barra-container">
+                            <div class="barra" id="barraQuimica6"></div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <button class="pular" style="background-color: #ffffff00;" onclick="goatualmente('atualmente4')"></button>
+        </div>
+
+
+
+        <section id="atualmente3">
+            <div id="atualmente4">
+
+                <div class="statusp">
+
+                    <div class="atributos"><img class="Pmen" src="../imagens/Personagens/Mike.png" alt="febatista">
+                        <div class="atu">
+                            <p>Afeto: <span id="afeto7"></span></p>
+                            <div class="barra-container">
+                                <div class="barra" id="barraAfeto7"></div>
+                            </div>
+
+                            <p>Confiança: <span id="confianca7"></span></p>
+                            <div class="barra-container">
+                                <div class="barra" id="barraConfianca7"></div>
+                            </div>
+
+                            <p>Interesse: <span id="interesse7"></span></p>
+                            <div class="barra-container">
+                                <div class="barra" id="barraInteresse7"></div>
+                            </div>
+
+                            <p>Quimica: <span id="quimica7"></span></p>
+                            <div class="barra-container">
+                                <div class="barra" id="barraQuimica7"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="atributos">
+                        <img class="Pmen" src="../imagens/Personagens/Pac.png" alt="febatista">
+                        <div class="atu">
+                            <p>Afeto: <span id="afeto8"></span></p>
+                            <div class="barra-container">
+                                <div class="barra" id="barraAfeto8"></div>
+                            </div>
+
+                            <p>Confiança: <span id="confianca8"></span></p>
+                            <div class="barra-container">
+                                <div class="barra" id="barraConfianca8"></div>
+                            </div>
+
+                            <p>Interesse: <span id="interesse8"></span></p>
+                            <div class="barra-container">
+                                <div class="barra" id="barraInteresse8"></div>
+                            </div>
+
+                            <p>Quimica: <span id="quimica8"></span></p>
+                            <div class="barra-container">
+                                <div class="barra" id="barraQuimica8"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="statusp">
+                    <div class="atributos">
+                        <img class="Pmen" src="../imagens/Personagens/Rezendeevil.png" alt="febatista">
+                        <div class="atu">
+                            <p>Afeto: <span id="afeto9"></span></p>
+                            <div class="barra-container">
+                                <div class="barra" id="barraAfeto9"></div>
+                            </div>
+
+                            <p>Confiança: <span id="confianca9"></span></p>
+                            <div class="barra-container">
+                                <div class="barra" id="barraConfianca9"></div>
+                            </div>
+
+                            <p>Interesse: <span id="interesse9"></span></p>
+                            <div class="barra-container">
+                                <div class="barra" id="barraInteresse9"></div>
+                            </div>
+
+                            <p>Quimica: <span id="quimica9"></span></p>
+                            <div class="barra-container">
+                                <div class="barra" id="barraQuimica9"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="atributos">
+                        <img class="Pmen" src="../imagens/Personagens/Spok.png" alt="febatista">
+                        <div class="atu">
+                            <p>Afeto: <span id="afeto10"></span></p>
+                            <div class="barra-container">
+                                <div class="barra" id="barraAfeto10"></div>
+                            </div>
+
+                            <p>Confiança: <span id="confianca10"></span></p>
+                            <div class="barra-container">
+                                <div class="barra" id="barraConfianca10"></div>
+                            </div>
+
+                            <p>Interesse: <span id="interesse10"></span></p>
+                            <div class="barra-container">
+                                <div class="barra" id="barraInteresse10"></div>
+                            </div>
+
+                            <p>Quimica: <span id="quimica10"></span></p>
+                            <div class="barra-container">
+                                <div class="barra" id="barraQuimica10"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="pular" style="background-color: #ffffff00; transform: scaleX(-1);"
+                        onclick="goatualmente('atualmente2')"></button>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="salva"></section>
+
+
+        <section id="Slog">
+            <div id="logContainer">
+                <button id="voltar_log" onclick="goToS()">Voltar</button>
+                <div id="tela_log">
+
+
+                </div>
+            </div>
+        </section>
+
+
+
+        <div id="tela_jogo" class="cenaNome">
+
+
+            <div class="falas">
+                Olá! Meu nome é <input type="text" id="nome" placeholder="digite seu nome">, sou um youtuber iniciante,
+                e um amigo meu, já bem famoso,
+                acabou me chamando para uma casa que ele convive com outros youtubers. É meu primeiro dia!
+                <button class="pular" onclick=" SNome();goTo('cena1');trocarfundo('entrada')"></button>
+            </div>
+        </div>
+    </div>
+
+    <section id="cena1">
+        <img style="filter: brightness(20%);" class="Pesquerda" src="../imagens/Personagens/Febatista.png"
+            alt="febatista">
+        <div class="falas">
+            De repente, uma figura se aproximou de mim. Demorou um pouco para descobrir quem era graças a minha miopia,
+            mas em seguida, notei seus cabelos loiros e cacheados conforme se aproximava.
+            <button class="pular" onclick="goTo('cena2')"></button>
+        </div>
+    </section>
+
+    <section id="cena2">
+        <img class="Pesquerda" src="../imagens/Personagens/Febatista.png" alt="febatista">
+        <div class="falas">
+            ???: “Ei, [NomeProtagonista]! Beleza? Febatista aqui! Você chegou! Tenho que te apresentar pro pessoal!
+            <button class="pular" onclick="goTo('cena3')"></button>
+        </div>
+    </section>
+
+    <section id="cena3">
+        <img class="Pesquerda" src="../imagens/Personagens/Febatista.png" alt="febatista">
+        <div class="falas">
+            “Febatista! Ufa, que bom que você foi o primeiro a aparecer! Sério, eu estava ficando bem preocupado.”
+            <button class="pular" onclick="goTo('cena4')"></button>
+
+        </div>
+    </section>
+
+    <section id="cena4">
+        <img class="Pesquerda" src="../imagens/Personagens/Febatista.png" alt="febatista">
+        <div class="falas">
+            Febatista: “Ah, relaxa! Todo mundo aqui é meio maluco, mas são gente boa… na maior parte do tempo. Vem, vou
+            te mostrar o casarão!”
+            <button class="pular" onclick="goTo('cena5');trocarfundo('sala')"></button>
+        </div>
+    </section>
+
+    <section id="cena5">
+        <img style="filter: brightness(50%);" class="Pmeio" src="../imagens/Personagens/Febatista_costas.png"
+            alt="febatista">
+        <div class="falas">
+            Febatista me guiou até o interior daquele casarão. Conforme nossos passos ecoavam por aquele lugar, um
+            sentimento de nostalgia cobria meu ser. Na sala, acabo me encontrando com três pessoas, pareciam não estar
+            tão interessados em iniciar uma conversa, teria eu que tomar iniciativa?
+            <button class="pular" onclick="goTo('cena6')"></button>
+        </div>
+    </section>
+
+    <section id="cena6">
+        <div class="falas">
+            <div>
+                <p>Febatista me cutucou.</p>
+                <p>Febatista: “Fala com alguém! Não fica travado, senão vão achar que você é um bot!”</p>
+            </div>
+            <div class="dopçao">
+                <div>
+                    <button class="opçao" onclick="goTo('cenaCellbit');trocarfundo('qt_cellbit')">FALAR COM O
+                        CELLBIT</button>
+                </div>
+                <div>
+                    <button class="opçao" onclick="goTo('cenaFelps');trocarfundo('piscina')">FALAR COM O FELPS</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cenaCellbit">
+        <img class="Pesquerda" src="../imagens/Personagens/Cellbit.png" alt="Cellbit">
+        <div class="falas">
+            [NomeProtagonista]: “Oi… Cellbit, né? Prazer, eu sou o novo youtuber da casa.”
+            <button class="pular" onclick="goTo('cenaCellbit2')"></button>
+        </div>
+    </section>
+
+    <section id="cenaCellbit2">
+        <img class="Pesquerda" src="../imagens/Personagens/Cellbit.png" alt="Cellbit">
+        <div class="falas">
+            Cellbit: “Qual foi seu pobre imundo?! Não venha conversar comigo.”
+            <button class="pular" onclick="goTo('cenaCellbit3')"></button>
+        </div>
+    </section>
+
+    <section id="cenaCellbit3">
+        <img class="Pesquerda" src="../imagens/Personagens/Cellbit.png" alt="Cellbit">
+        <div class="falas">
+            <div>
+                O que eu deveria falar pra ele?...
+            </div>
+            <div class="dopçao">
+                <div>
+                    <button class="opçao" onclick="goTo('cenaCellbit4.1')">“Vai catar coquinho, seu otário!”</button>
+                </div>
+                <div>
+                    <button class="opçao" onclick="goTo('cenaCellbit4.2')">“Ah, desculpa.”</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cenaCellbit4.1">
+        <img class="Pesquerda" src="../imagens/Personagens/Cellbit.png" alt="Cellbit">
+        <div class="falas">
+            <div>
+                Cellbit: “Quem você pensa que é? Sai da minha frente!”
+                <p>Ele simplesmente virou a cara, parece que não vai mais conversar comigo.</p>
+                <button class="pular" onclick="goTo('cenaCellbit4.1.2')"></button>
+            </div>
+        </div>
+    </section>
+
+    <section id="cenaCellbit4.1.2">
+        <img class="Pdireita" src="../imagens/Personagens/Febatista.png" alt="Febatista">
+        <div class="falas">
+            <div>
+                Febatista: “É.. Parece que não conseguiu falar com o Cellbit. Ele é um pouco chato de lidar.
+                Provavelmente ele só vai falar com você se tiver dinheiro na conta.”
+                <button class="pular" onclick="goTo('cena6')"></button>
+            </div>
+        </div>
+    </section>
+
+    <section id="cenaCellbit4.2">
+        <img class="Pesquerda" src="../imagens/Personagens/Cellbit.png" alt="Cellbit">
+        <div class="falas">
+            <div>
+                Cellbit parou por um instante, ainda segurando o celular. Seus olhos me analisaram de cima a baixo, como
+                se estivesse tentando decidir se eu era uma ameaça ou só mais um erro do sistema.
+                <button class="pular" onclick="goTo('cenaCellbit4.2.2');aumentar(Cellbit,10)"></button>
+            </div>
+        </div>
+    </section>
+
+    <section id="cenaCellbit4.2.2">
+        <img class="Pesquerda" src="../imagens/Personagens/Cellbit.png" alt="Cellbit">
+        <div class="falas">
+            <div>
+                Cellbit: “Desculpa? Hm. Interessante. Você já começa com pedidos de desculpa antes mesmo de fazer algo
+                errado. Um padrão comportamental curioso…”
+                <button class="pular" onclick="goTo('cenaCellbit4.2.3')"></button>
+            </div>
+        </div>
+    </section>
+
+    <section id="cenaCellbit4.2.3">
+        <img class="Pesquerda" src="../imagens/Personagens/Cellbit.png" alt="Cellbit">
+        <div class="falas">
+            <div>
+                [NomeProtagonista]: “É… eu só queria ser educado mesmo.”
+                <button class="pular" onclick="goTo('cenaCellbit4.2.4')"></button>
+            </div>
+        </div>
+    </section>
+
+    <section id="cenaCellbit4.2.4">
+        <img class="Pesquerda" src="../imagens/Personagens/Cellbit.png" alt="Cellbit">
+        <div class="falas">
+            <div>
+                Cellbit: “Educado? Educado? Ninguém sobrevive nessa casa sendo educado. Aqui é um campo de guerra
+                digital. Ontem mesmo o Felps invadiu a conta do Authentic só pra trocar a foto de perfil dele pra uma
+                batata com óculos de sol.”
+                <button class="pular" onclick="goTo('cenaCellbit4.2.5');aumentar(Cellbit,10)"></button>
+            </div>
+        </div>
+    </section>
+
+    <section id="cenaCellbit4.2.5">
+        <img class="Pesquerda" src="../imagens/Personagens/Cellbit.png" alt="Cellbit">
+        <div class="falas">
+            <div>
+                [NomeProtagonista]: “…Isso é sério?”
+                <button class="pular" onclick="goTo('cenaCellbit4.2.6')"></button>
+            </div>
+        </div>
+    </section>
+
+    <section id="cenaCellbit4.2.6">
+        <img class="Pesquerda" src="../imagens/Personagens/Cellbit.png" alt="Cellbit">
+        <div class="falas">
+            <div>
+                Cellbit: “Tudo é sério. Ou nada é. Esse é o Enigma da vez.”
+                <p>Dou alguns passos para trás, aquele homem simplesmente puxou seu celular do bolso e começou a digitar
+                    em velocidade surpreendente.</p>
+                <button class="pular" onclick="goTo('cena6');aumentar(Cellbit,10)"></button>
+            </div>
+        </div>
+    </section>
+
+    <section id="cenaFelps">
+        <img class="Pdireita" src="../imagens/Personagens/Felps.png" alt="Felps">
+        <div class="falas">
+            Felps: “Pisicna, pisicna, pisicna, PISCINA”
+            <button class="pular" onclick="goTo('cenaFelps2')"></button>
+        </div>
+    </section>
+
+    <section id="cenaFelps2">
+        <img class="Pdireita" src="../imagens/Personagens/Felps.png" alt="Felps">
+        <div class="falas">
+            <div>
+                O que eu deveria falar pra ele?...
+            </div>
+            <div class="dopçao">
+                <div>
+                    <button class="opçao" onclick="goTo('cenaFelps3')">“Opa, qual seu nome?”</button>
+                </div>
+                <div>
+                    <button class="opçao" onclick="goTo('cenaFelps8')">“Piscina?”</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cenaFelps3">
+        <img class="Pdireita" src="../imagens/Personagens/Felps.png" alt="Felps">
+        <div class="falas">
+            Felps: “Hey galera! Meu nome é Felps, você é o novo youtuber da casa? O Febatista falou bastante de você! O
+            Febatista falou de você umas três vezes, e cada vez ele aumentava a história. Na última, você já tinha 2
+            milhões de inscritos e um estúdio próprio.”
+            <button class="pular" onclick="goTo('cenaFelps4')"></button>
+        </div>
+    </section>
+
+    <section id="cenaFelps4">
+        <img class="Pdireita" src="../imagens/Personagens/Felps.png" alt="Felps">
+        <div class="falas">
+            Distante, uma voz ecoou pela sala.
+            <p>Febatista (gritando da sala): “Marketing, Felps! É tudo marketing!”</p>
+            <p>Felps riu.</p>
+            <button class="pular" onclick="goTo('cenaFelps5')"></button>
+        </div>
+    </section>
+
+    <section id="cenaFelps5">
+        <img class="Pdireita" src="../imagens/Personagens/Felps.png" alt="Felps">
+        <div class="falas">
+            Felps: “Seja bem-vindo, [NomeProtagonista]. Espero que curta a bagunça. Aqui é tipo um zoológico.”
+            <button class="pular" onclick="goTo('cenaFelps6')"></button>
+        </div>
+    </section>
+
+    <section id="cenaFelps6">
+        <img class="Pdireita" src="../imagens/Personagens/Felps.png" alt="Felps">
+        <div class="falas">
+            <div>
+                O que eu deveria falar pra ele?...
+            </div>
+            <div class="dopçao">
+                <div>
+                    <button class="opçao" onclick="goTo('cenaFelps7.1');aumentar(Felps,10)">“Sou o novo youtuber sim, espero que possamos
+                        nos dar bem!”</button>
+                </div>
+                <div>
+                    <button class="opçao" onclick="goTo('cenaFelps7.2');aumentar(Felps,10)">“O Febatista falou muito de mim? Caramba, fico
+                        feliz!”</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cenaFelps7.1">
+        <img class="Pdireita" src="../imagens/Personagens/Felps.png" alt="Felps">
+        <div class="falas">
+            Felps sorri, animado.
+            <p>Felps: “Boa! Gosto de gente otimista. Aqui a gente tenta se ajudar... ou pelo menos fingir que ajuda
+                enquanto grava collab pra monetizar.”</p>
+            <button class="pular" onclick="goTo('cena7');aumentar(Felps,10)"></button>
+        </div>
+    </section>
+
+    <section id="cenaFelps7.2">
+        <img class="Pdireita" src="../imagens/Personagens/Felps.png" alt="Felps">
+        <div class="falas">
+            Felps: “Falou sim! Disse que você tinha umas ideias diferentes, que era criativo e que provavelmente ia
+            deixar o Cellbit maluco tentando entender seus vídeos.”
+            <button class="pular" onclick="goTo('cenaFelps7.2.2');aumentar(Felps,10)"></button>
+        </div>
+    </section>
+
+    <section id="cenaFelps7.2.2">
+        <img class="Pdireita" src="../imagens/Personagens/Felps.png" alt="Felps">
+        <div class="falas">
+            De longe, a voz do Febatista ecoou de novo, rindo:
+            <p>Febatista: “É verdade! Eu disse que o [NomeProtagonista] ia revolucionar a casa! Ou pelo menos quebrar
+                alguma coisa tentando.”</p>
+            <button class="pular" onclick="goTo('cenaFelps7.2.3')"></button>
+        </div>
+    </section>
+
+    <section id="cenaFelps7.2.3">
+        <img class="Pdireita" src="../imagens/Personagens/Felps.png" alt="Felps">
+        <div class="falas">
+            Felps gargalhou.
+            <p>Felps: “Se ele falou isso, então é oficial: você tá aceito no caos. Bem-vindo à equipe!</p>
+            <button class="pular" onclick="goTo('cena7')"></button>
+        </div>
+    </section>
+
+    <section id="cenaFelps8">
+        <img class="Pdireita" src="../imagens/Personagens/Felps.png" alt="Felps">
+        <div class="falas">
+            Felps: “É! Piscina! Eu sempre esqueço como se fala isso. Meu nome é Felps, você deve ser o
+            [NomeProtagonista], não é?”
+            <button class="pular" onclick="goTo('cenaFelps8.1');aumentar(Felps,10)"></button>
+        </div>
+    </section>
+
+    <section id="cenaFelps8.1">
+        <img class="Pdireita" src="../imagens/Personagens/Felps.png" alt="Felps">
+        <div class="falas">
+            <div>
+                O que eu deveria falar pra ele?...
+            </div>
+            <div class="dopçao">
+                <div>
+                    <button class="opçao" onclick="goTo('cenaFelps8.2');aumentar(Felps,10)">“Sou o novo youtuber sim, espero que possamos
+                        nos dar bem!”</button>
+                </div>
+                <div>
+                    <button class="opçao" onclick="goTo('cenaFelps8.3');aumentar(Felps,10)">“Eu também tenho dificuldade pra falar piscina,
+                        como que as pessoas conseguem?”</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cenaFelps8.2">
+        <img class="Pdireita" src="../imagens/Personagens/Felps.png" alt="Felps">
+        <div class="falas">
+            Felps: “Ah, então é você o novato! Eu sabia que o Febatista não tava inventando.. bom, não totalmente.”
+            <button class="pular" onclick="goTo('cenaFelps8.2.1')"></button>
+        </div>
+    </section>
+
+    <section id="cenaFelps8.2.1">
+        <img class="Pdireita" src="../imagens/Personagens/Felps.png" alt="Felps">
+        <div class="falas">
+            Ele dá uma risadinha, cruzando os braços.
+            <p>Felps: “Seja bem-vindo! Aqui a regra é simples: se algo der errado, grava. Sempre rende conteúdo.”</p>
+            <button class="pular" onclick="goTo('cenaFelps8.2.2');aumentar(Felps,10)"></button>
+        </div>
+    </section>
+
+    <section id="cenaFelps8.2.2">
+        <img class="Pdireita" src="../imagens/Personagens/Felps.png" alt="Felps">
+        <div class="falas">
+            [NomeProtagonista]: “Boa filosofia… meio perigosa, mas boa.”
+            <button class="pular" onclick="goTo('cenaFelps8.2.3')"></button>
+        </div>
+    </section>
+
+    <section id="cenaFelps8.2.3">
+        <img class="Pdireita" src="../imagens/Personagens/Felps.png" alt="Felps">
+        <div class="falas">
+            Felps: “É o lema da casa! Já virou quase um mantra. Tipo… ‘Se explodiu, viralizou.’”
+            <button class="pular" onclick="goTo('cenaFelps8.2.4')"></button>
+        </div>
+    </section>
+
+    <section id="cenaFelps8.2.4">
+        <img class="Pdireita" src="../imagens/Personagens/Felps.png" alt="Felps">
+        <div class="falas">
+            Ele faz uma pausa, pensativo.
+            <p>Felps: “Falando nisso, espero que você não tenha medo de barulhos estranhos à noite. Às vezes é o Rezende
+                editando, às vezes é só o micro-ondas possuído.”</p>
+            <button class="pular" onclick="goTo('cenaFelps8.3.5');aumentar(Felps,10)"></button>
+        </div>
+    </section>
+
+    <section id="cenaFelps8.3">
+        <img class="Pdireita" src="../imagens/Personagens/Felps.png" alt="Felps">
+        <div class="falas">
+            Felps: “Ah, então você me entende!”
+            <button class="pular" onclick="goTo('cenaFelps8.3.1')"></button>
+        </div>
+    </section>
+
+    <section id="cenaFelps8.3.1">
+        <img class="Pdireita" src="../imagens/Personagens/Felps.png" alt="Felps">
+        <div class="falas">
+            Felps: “Eu sabia que não tava sozinho nesse mundo injusto das sílabas confusas. É sempre pi-sci-na... mas
+            meu cérebro fala pisicna, tipo uma palavra secreta desbloqueável.”
+            <button class="pular" onclick="goTo('cenaFelps8.3.2')"></button>
+        </div>
+    </section>
+
+    <section id="cenaFelps8.3.2">
+        <img class="Pdireita" src="../imagens/Personagens/Felps.png" alt="Felps">
+        <div class="falas">
+            [NomeProtagonista]: “Sim! Quando eu tento falar rápido, parece que minha língua entra em modo de defesa e
+            trava.”
+            <button class="pular" onclick="goTo('cenaFelps8.3.3')"></button>
+        </div>
+    </section>
+
+    <section id="cenaFelps8.3.3">
+        <img class="Pdireita" src="../imagens/Personagens/Felps.png" alt="Felps">
+        <div class="falas">
+            Felps: “Já gostei de você, [NomeProtagonista]. Pouca gente admite perder pra uma palavra. Isso mostra
+            coragem. E um leve desequilíbrio mental, talvez?.. O que é ótimo! Vai combinar com o resto da casa.”
+            <button class="pular" onclick="goTo('cenaFelps8.3.4');aumentar(Felps,10)"></button>
+        </div>
+    </section>
+
+    <section id="cenaFelps8.3.4">
+        <img class="Pdireita" src="../imagens/Personagens/Felps.png" alt="Felps">
+        <div class="falas">
+            Felps: “Vou sair aqui, tenho um vídeo pra editar. Cê pode procurar por mim no meu quarto! A gente se vê por
+            aí!”
+            <button class="pular" onclick="goTo('cenaFelps8.3.5')"></button>
+        </div>
+    </section>
+
+    <section id="cenaFelps8.3.5">
+        <img class="Pdireita" src="../imagens/Personagens/Felps.png" alt="Felps">
+        <div class="falas">
+            Febatista: “Parece que se deu bem com o Felps, que bom! Acho que agora pode explorar o lugar.”
+            <button class="pular" onclick="goTo('cena7');aumentar(Felps,10)"></button>
+        </div>
+    </section>
+
+    <section id="cena7">
+        <img class="Pesquerda" src="../imagens/Personagens/Febatista.png">
+        <div class="falas">
+            <div>
+                <p>Febatista: “E aí, vai pra onde agora?”</p>
+            </div>
+            <div class="dopçao">
+                <div>
+                    <button style="width: 240px;" class="opçao" onclick="goTo('cenaPiscina');trocarfundo('piscina')">Ir
+                        para Piscina</button>
+                </div>
+                <div>
+                    <button style="width: 240px;" class="opçao" onclick="goTo('cenaCozinha');trocarfundo('cozinha')">Ir
+                        para Cozinha</button>
+                </div>
+                <div>
+                    <button style="width: 240px;" class="opçao" onclick="goTo('cenaSpok');trocarfundo('qt_spok')">Ir
+                        para um Quarto Aleatório</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cenaPiscina">
+        <div class="falas">
+            Enquanto vou andando pelos corredores, encontro uma passagem que leva diretamente até uma grande piscina.
+            Chegando lá, vejo duas pessoas, uma parecia estar relaxando, deitada numa toalha, tomando um banho de sol.
+            Enquanto isso, outra figura estava com uma escada, mexendo em alguns fios soltos que pareciam conectar a luz
+            na casa.
+            <button class="pular" onclick="goTo('cenaPiscina2')"></button>
+        </div>
+    </section>
+
+    <section id="cenaPiscina2">
+        <img class="Pdireita" src="../imagens/Personagens/Authentic.png" alt="Authentic">
+        <div class="falas">
+            <p>AuthenticGames: “Faaaala aí galera, mais um dia aqui do canal.. AuthenticGames! Ah! E aí! Você é o cara
+                novo né?”</p>
+            <p>Aquela figura se levantou da cadeira e decidiu se aproximar de mim. Colocando uma jaqueta xadrez azul e
+                branca, enquanto inclinava um pouco a cabeça para cima, olhando para alguém que estava o chamando.</p>
+            <button class="pular" onclick="goTo('cenaPiscina3');aumentar(Authentic,5)"></button>
+        </div>
+    </section>
+
+    <section id="cenaPiscina3">
+        <img class="Pesquerda" src="../imagens/Personagens/Jazzghost.png" alt="Jazzghost">
+        <div class="falas">
+            <p>Jazzghost: “Aí, ô Authentic, cê me alcança a chave de fenda aí, sô?”</p>
+            <p>Um homem bem arrumado com um terno marrom, era quem estava na escada. Ele estava estendendo a mão para
+                conseguir pegar uma chave de fenda solta em uma mesa ao lado, mas não conseguia.</p>
+            <button class="pular" onclick="goTo('cenaPiscina4')"></button>
+        </div>
+    </section>
+
+    <section id="cenaPiscina4">
+        <div class="falas">
+            <div>
+                O que eu deveria fazer?
+            </div>
+            <div class="dopçao">
+                <div>
+                    <button class="opçao" onclick="goTo('cenaPiscina5.1');aumentar(jazzghost,5)">Entregar a Chave de Fenda</button>
+                </div>
+                <div>
+                    <button class="opçao" onclick="goTo('cenaPiscina5.2');aumentar(Authentic,5)">Deixar Authentic entregar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cenaPiscina5.1">
+        <img class="Pesquerda" src="../imagens/Personagens/Jazzghost.png" alt="Jazzghost">
+        <div class="falas">
+            <p>[NomeProtagonista]: “Aqui, moço, toma. Cuidado pra não cair daí.”</p>
+            <button class="pular" onclick="goTo('cenaPiscina5.1.2')"></button>
+        </div>
+    </section>
+
+    <section id="cenaPiscina5.1.2">
+        <img class="Pesquerda" src="../imagens/Personagens/Jazzghost.png" alt="Jazzghost">
+        <div class="falas">
+            <p>Jazzghost: “Oh, valeu demais, uai! Cê salvou minha vida… é complicado ser o único que sabe construir
+                nessa joça.”</p>
+            <button class="pular" onclick="goTo('cenaPiscina5.1.3')"></button>
+        </div>
+    </section>
+
+    <section id="cenaPiscina5.1.3">
+        <img class="Pdireita" src="../imagens/Personagens/Authentic.png" alt="Authentic">
+        <div class="falas">
+            <p>AuthenticGames: “Hein, Jazz, cuidado aí em cima! A última vez que você mexeu nos fios, metade da casa
+                ficou sem energia e o Cellbit achou que era o apocalipse digital.”</p>
+            <button class="pular" onclick="goTo('cenaPiscina5.1.4')"></button>
+        </div>
+    </section>
+
+    <section id="cenaPiscina5.1.4">
+        <img class="Pesquerda" src="../imagens/Personagens/Jazzghost.png" alt="Jazzghost">
+        <div class="falas">
+            <p>Jazzghost: “Ah, mas dessa vez é diferente, Authentic! Agora eu sei o que tô fazendo.”</p>
+            <button class="pular" onclick="goTo('cenaPiscina5.1.5')"></button>
+        </div>
+    </section>
+
+    <section id="cenaPiscina5.1.5">
+        <img class="Pdireita" src="../imagens/Personagens/Authentic.png" alt="Authentic">
+        <div class="falas">
+            <p>Authentic levanta uma sobrancelha.</p>
+            <p>AuthenticGames: “Você acabou de pedir uma chave de fenda pra apertar um fio de energia, Jazz.”</p>
+            <button class="pular" onclick="goTo('cenaPiscina5.1.6')"></button>
+        </div>
+    </section>
+
+    <section id="cenaPiscina5.1.6">
+        <img class="Pesquerda" src="../imagens/Personagens/Jazzghost.png" alt="Jazzghost">
+        <div class="falas">
+            <p>Jazzghost: “E daí? O improviso é a alma do conteúdo!”</p>
+            <p>Ele termina de apertar algo e desce da escada, limpando as mãos na calça.</p>
+            <p>Jazzghost: “Valeu mesmo, [NomeProtagonista]. Gente assim que ajuda sem pensar duas vezes é rara por aqui.
+                Se precisar de algo, só chamar, bão?”</p>
+            <button class="pular" onclick="goTo('cenaPiscina5.1.7');aumentar(jazzghost,5)"></button>
+        </div>
+    </section>
+
+    <section id="cenaPiscina5.1.7">
+        <img class="Pesquerda" src="../imagens/Personagens/Jazzghost.png" alt="Jazzghost">
+        <div class="falas">
+            <p>AuthenticGames: “É, parece que você conquistou o mineirinho. Cuidado que o próximo passo é ele te chamar
+                pra tomar café com pão de queijo.”</p>
+            <p>Jazzghost: “Uai, e qual o problema nisso?!”</p>
+            <p>Os dois riem, e você sente o clima ficar mais leve. Jazz parece realmente ter simpatizado com você.</p>
+            <button class="pular" onclick="goTo('cena7');aumentar(jazzghost,5)"></button>
+        </div>
+    </section>
+
+    <section id="cenaPiscina5.2">
+        <img class="Pdireita" src="../imagens/Personagens/Authentic.png" alt="Authentic">
+        <div class="falas">
+            <p>[NomeProtagonista]: “Ah, pode pegar ali, Authentic, parece que você tá mais perto.”</p>
+            <button class="pular" onclick="goTo('cenaPiscina5.2.2')"></button>
+        </div>
+    </section>
+
+    <section id="cenaPiscina5.2.2">
+        <img class="Pdireita" src="../imagens/Personagens/Authentic.png" alt="Authentic">
+        <div class="falas">
+            <p>AuthenticGames: “Beleza, beleza, deixa comigo!”</p>
+            <p>Authentic pega a chave de fenda e entrega para Jazz, que parece te olhar um pouco triste.</p>
+            <button class="pular" onclick="goTo('cenaPiscina5.2.3')"></button>
+        </div>
+    </section>
+
+    <section id="cenaPiscina5.2.3">
+        <img class="Pdireita" src="../imagens/Personagens/Authentic.png" alt="Authentic">
+        <div class="falas">
+            <p>AuthenticGames: “E é assim, galera! Nunca subestimem o poder de uma chave de fenda, a ferramenta
+                essencial pra quem grava e sobrevive na internet!”</p>
+            <button class="pular" onclick="goTo('cenaPiscina5.2.4');aumentar(Authentic,5)"></button>
+        </div>
+    </section>
+
+    <section id="cenaPiscina5.2.4">
+        <img class="Pesquerda" src="../imagens/Personagens/Jazzghost.png" alt="Jazzghost">
+        <div class="falas">
+            <p>Jazzghost, ainda na escada, solta um suspiro.</p>
+            <p>Jazzghost: “Cês tão gravando até entrega de ferramenta agora?”</p>
+            <button class="pular" onclick="goTo('cenaPiscina5.2.5')"></button>
+        </div>
+    </section>
+
+    <section id="cenaPiscina5.2.5">
+        <img class="Pdireita" src="../imagens/Personagens/Authentic.png" alt="Authentic">
+        <div class="falas">
+            <p>AuthenticGames: “Ué, conteúdo é conteúdo! Nunca se sabe o que viraliza, Jazz.”</p>
+            <button class="pular" onclick="goTo('cenaPiscina5.2.6');aumentar(Authentic,5)"></button>
+        </div>
+    </section>
+
+    <section id="cenaPiscina5.2.6">
+        <img class="Pesquerda" src="../imagens/Personagens/Jazzghost.png" alt="Jazzghost">
+        <div class="falas">
+            <p>Jazzghost: “Ah, então beleza... quando levar choque, já vai ter thumbnail pronta.”</p>
+            <p>Authentic ri, entrega a ferramenta, e Jazz resmunga algo baixo enquanto volta ao serviço.</p>
+            <button class="pular" onclick="goTo('cenaPiscina5.2.7')"></button>
+        </div>
+    </section>
+
+    <section id="cenaPiscina5.2.7">
+        <img class="Pdireita" src="../imagens/Personagens/Authentic.png" alt="Authentic">
+        <div class="falas">
+            <p>AuthenticGames: “Valeu por deixar eu entregar, mano! Eu adoro esses momentos simples, sabe? Até uma chave
+                de fenda pode ser um vídeo de 2 milhões de views com o ângulo certo.”</p>
+            <button class="pular" onclick="goTo('cenaPiscina5.2.8')"></button>
+        </div>
+    </section>
+
+    <section id="cenaPiscina5.2.8">
+        <img class="Pdireita" src="../imagens/Personagens/Authentic.png" alt="Authentic">
+        <div class="falas">
+            <p>[NomeProtagonista]: “É, você realmente pensa em conteúdo o tempo todo, hein?”</p>
+            <p>AuthenticGames: “Sempre! Aqui a gente respira, come e dorme YouTube. E às vezes toma café também.”</p>
+            <button class="pular" onclick="goTo('cenaPiscina5.2.10')"></button>
+        </div>
+    </section>
+
+    <section id="cenaPiscina5.2.10">
+        <img class="Pdireita" src="../imagens/Personagens/Authentic.png" alt="Authentic">
+        <div class="falas">
+            <p>Ele dá um tapinha no ombro.</p>
+            <p>AuthenticGames: “Gente boa você, gostei. Bora gravar algo juntos qualquer dia desses.”</p>
+            <button class="pular" onclick="goTo('cenaJazz')"></button>
+        </div>
+    </section>
+
+    <section id="cenaJazz">
+        <div class="falas">
+            <div>
+                O que eu deveria fazer?
+            </div>
+            <div class="dopçao">
+                <div>
+                    <button class="opçao" onclick="goTo('cenaJazz2')">Falar com Jazz</button>
+                </div>
+                <div>
+                    <button class="opçao" onclick="goTo('cena7')">Voltar a Explorar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cenaJazz2">
+        <img class="Pesquerda" src="../imagens/Personagens/Jazzghost.png" alt="Jazzghost">
+        <div class="falas">
+            <p>[NomeProtagonista]: “Aí Jazz, me desculpa por não ter pegado a chave de fenda naquela hora, beleza? Eu
+                não tava querendo te deixar irritado nem nada, só pensei que seria melhor mesmo.”</p>
+            <button class="pular" onclick="goTo('cenaJazz3');aumentar(jazzghost,5)"></button>
+        </div>
+    </section>
+
+    <section id="cenaJazz3">
+        <img class="Pesquerda" src="../imagens/Personagens/Jazzghost.png" alt="Jazzghost">
+        <div class="falas">
+            <p>Jazz se virou pra mim, parecia meio irritado pela sua expressão. Ele respirou fundo antes de falar.</p>
+            <p>Jazzghost: “Olha... eu fiquei meio irritado na hora, confesso. Aqui nessa casa, se a gente não faz as
+                coisas, ninguém faz. E eu já tava cansado de pedir ajuda.”</p>
+            <button class="pular" onclick="goTo('cenaJazz4');aumentar(jazzghost,5)"></button>
+        </div>
+    </section>
+
+    <section id="cenaJazz4">
+        <img class="Pesquerda" src="../imagens/Personagens/Jazzghost.png" alt="Jazzghost">
+        <div class="falas">
+            <p>[NomeProtagonista]: “É, eu entendo. Só achei que o Authentic tava mais perto, mas podia ter te ajudado
+                direto.”</p>
+            <button class="pular" onclick="goTo('cenaJazz5')"></button>
+        </div>
+    </section>
+
+    <section id="cenaJazz5">
+        <img class="Pesquerda" src="../imagens/Personagens/Jazzghost.png" alt="Jazzghost">
+        <div class="falas">
+            <p>Jazzghost: “Ah, relaxa. Cê foi de boa, e pelo menos o Authentic não derrubou a escada, então já é uma
+                vitória.”</p>
+            <p>Ele dá uma risadinha leve, cruzando os braços.</p>
+            <button class="pular" onclick="goTo('cenaJazz6')"></button>
+        </div>
+    </section>
+
+    <section id="cenaJazz6">
+        <img class="Pesquerda" src="../imagens/Personagens/Jazzghost.png" alt="Jazzghost">
+        <div class="falas">
+            <p>Jazzghost: “Cê parece gente boa, [NomeProtagonista]. Só... tenta ser mais direto da próxima vez, tá? Aqui
+                é tudo na base do improviso, e ninguém leva nada muito a sério... pelo menos não até dar errado.”</p>
+            <button class="pular" onclick="goTo('cenaJazz7')"></button>
+        </div>
+        <section>
+
+            <section id="cenaJazz7">
+                <img class="Pesquerda" src="../imagens/Personagens/Jazzghost.png" alt="Jazzghost">
+                <div class="falas">
+                    <p>[NomeProtagonista]: “Entendido. Prometo que da próxima eu pego a chave sem hesitar.”</p>
+                    <button class="pular" onclick="goTo('cenaJazz8')"></button>
+                </div>
+            </section>
+
+            <section id="cenaJazz8">
+                <img class="Pesquerda" src="../imagens/Personagens/Jazzghost.png" alt="Jazzghost">
+                <div class="falas">
+                    <p>Jazzghost: “Aí sim! Já tá aprendendo o jeitinho da casa.”</p>
+                    <button class="pular" onclick="goTo('cena7')"></button>
+                </div>
+            </section>
+
+            <section id="cenaCozinha">
+                <div class="falas">
+                    Indo em direção da cozinha seguindo pelos corredores, sente o cheiro forte de estrogonofe, e dos
+                    bons! Conforme se aproxima, escuta duas pessoas conversando.
+                    <button class="pular" onclick="goTo('cenaCozinha2')"></button>
+                </div>
+            </section>
+
+            <section id="cenaCozinha">
+                <img class="Pesquerda" src="../imagens/Personagens/Rezendeevil.png" alt="Rezende">
+                <div class="falas">
+                    <p>Rezendeevil: “Aí, Malena, tô tomando cuidado pra não queimar dessa vez, o que cê acha? Tá ficando
+                        com cheiro bom, né não?”</p>
+                    <p>Malena: “Olha.. Admito que tá surpreendente. Você geralmente é o pior na culinária da casa."</p>
+                    <button class="pular" onclick="goTo('cenaCozinha2')"></button>
+                </div>
+            </section>
+
+            <section id="cenaCozinha2">
+                <img class="Pdireita" src="../imagens/Personagens/Malena.png" alt="Malena">
+                <div class="falas">
+                    <p>Rezendeevil: “Aaah, qualé! Eu tô tentando melhorar nisso, eu juro!”</p>
+                    <p>Malena: “Ih. Olha ali, Rezende! Tem um cara novo.”</p>
+                    <button class="pular" onclick="goTo('cenaCozinha3')"></button>
+                </div>
+            </section>
+
+            <section id="cenaCozinha3">
+                <img class="Pesquerda" src="../imagens/Personagens/Rezendeevil.png" alt="Rezende">
+                <div class="falas">
+                    <p>[NomeProtagonista]: “Opa, e aí pessoal!”</p>
+                    <p>Rezendeevil: “Faaala moleques e bonecas, Rezendeevil aqui! Como é que cê tá? Acho que você chegou
+                        bem na hora! Quer provar um pedaço da minha lasanha?”</p>
+                    <p>Ele pegou um recipiente de vidro, nele estava a lasanha recém tirada do forno.</p>
+                    <button class="pular" onclick="goTo('cenaCozinha4')"></button>
+                </div>
+            </section>
+
+            <section id="cenaCozinha4">
+                <div class="falas">
+                    <div>
+                        O que eu deveria fazer?
+                    </div>
+                    <div class="dopçao">
+                        <div>
+                            <button class="opçao" onclick="goTo('aceitarlas');aumentar(Rezendeevil,5)">Aceitar</button>
+                        </div>
+                        <div>
+                            <button class="opçao" onclick="goTo('negarlas');aumentar(Malena,5)">Negar</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="aceitarlas">
+                <img class="Pesquerda" src="../imagens/Personagens/Rezendeevil.png" alt="Rezende">
+                <div class="falas">
+                    <p>[NomeProtagonista]: “Claro, por que não? Estou curioso pra ver se é verdade que você melhorou na
+                        cozinha.”</p>
+                    <button class="pular" onclick="goTo('aceitarlas2');aumentar(Rezendeevil,5)"></button>
+                </div>
+            </section>
+
+            <section id="aceitarlas2">
+                <img class="Pesquerda" src="../imagens/Personagens/Rezendeevil.png" alt="Rezende">
+                <div class="falas">
+                    <p>Rezendeevil: “Haha, é isso aí! Confia em mim, cê vai se surpreender.”</p>
+                    <p>Eu pego um pedaço e dou a primeira mordida. O sabor é melhor do que eu esperava! Suculento,
+                        temperado na medida certa.</p>
+                    <button class="pular" onclick="goTo('aceitarlas3')"></button>
+                </div>
+            </section>
+
+            <section id="aceitarlas3">
+                <img class="Pesquerda" src="../imagens/Personagens/Rezendeevil.png" alt="Rezende">
+                <div class="falas">
+                    <p>[NomeProtagonista]: “Uau… sério, tá muito bom mesmo! Acho que você tá evoluindo na cozinha,
+                        Rezende.”</p>
+                    <p>Rezendeevil: “Viu? Eu disse! Nada de queimado dessa vez!”</p>
+                    <p>Malena ri, cruzando os braços.</p>
+                    <button class="pular" onclick="goTo('aceitarlas4');aumentar(Rezendeevil,5)"></button>
+                </div>
+            </section>
+
+            <section id="aceitarlas4">
+                <img class="Pdireita" src="../imagens/Personagens/Malena.png" alt="Malena">
+                <div class="falas">
+                    <p>Malena: “Tá, admito… não tá horrível. Mas cuidado, hein? Não vai me fazer elogiar demais, senão
+                        ele se acha o Jacquin da casa.”</p>
+                    <p>Rezendeevil: “Uai, tô gostando desse elogio, Malena!”</p>
+                    <button class="pular" onclick="goTo('aceitarlas5')"></button>
+                </div>
+            </section>
+
+            <section id="aceitarlas5">
+                <img class="Pesquerda" src="../imagens/Personagens/Rezendeevil.png" alt="Rezende">
+                <div class="falas">
+                    <p>[NomeProtagonista]: “Valeu pelo convite, é sempre bom conhecer o talento culinário da casa.”</p>
+                    <p>Rezendeevil: “Pode deixar, cê já ganhou pontos aqui! Quando tiver sem ideias, chama que eu te
+                        ensino uns truques.”</p>
+                    <button class="pular" onclick="goTo('cena7');aumentar(Rezendeevil,5)"></button>
+                </div>
+            </section>
+
+            <section id="negarlas">
+                <img class="Pesquerda" src="../imagens/Personagens/Rezendeevil.png" alt="Rezende">
+                <div class="falas">
+                    <p>[NomeProtagonista]: “Ah, obrigado, mas vou passar dessa vez… ainda tô meio cheio.”</p>
+                    <button class="pular" onclick="goTo('negarlas2')"></button>
+                </div>
+            </section>
+
+            <section id="negarlas2">
+                <img class="Pesquerda" src="../imagens/Personagens/Rezendeevil.png" alt="Rezende">
+                <div class="falas">
+                    <p>Rezendeevil: “Como assim, cheio? Cê mal chegou e já tá rejeitando minha obra-prima culinária?!”
+                    </p>
+                    <button class="pular" onclick="goTo('negarlas3')"></button>
+                </div>
+            </section>
+
+            <section id="negarlas3">
+                <img class="Pdireita" src="../imagens/Personagens/Malena.png" alt="Malena">
+                <div class="falas">
+                    <p>Malena ri, cruzando os braços.</p>
+                    <p>Malena: “Relaxa, Rezende… cada um tem seu momento. Mas olha, você perdeu a chance de ganhar
+                        pontos, viu?”</p>
+                    <p>[NomeProtagonista]: “Ah, é, paciência… Vou deixar pra próxima, prometo.”</p>
+                    <button class="pular" onclick="goTo('negarlas4');aumentar(Malena,5)"></button>
+                </div>
+            </section>
+
+            <section id="negarlas4">
+                <img class="Pesquerda" src="../imagens/Personagens/Rezendeevil.png" alt="Rezende">
+                <div class="falas">
+                    <p>Rezendeevil suspira dramaticamente.</p>
+                    <p>Rezendeevil: “Tudo bem, tudo bem… vou sobreviver, mas espero que não se arrependa quando provar a
+                        próxima!”</p>
+                    <p>Malena: “Tá vendo? Ele dramatiza tudo, mas é gente boa. Pode vir tranquilo depois se mudar de
+                        ideia.”</p>
+                    <button class="pular" onclick="goTo('cenaRezende')"></button>
+                </div>
+            </section>
+
+            <section id="cenaRezende">
+                <div class="falas">
+                    <div>
+                        O que eu deveria fazer?
+                    </div>
+                    <div class="dopçao">
+                        <div>
+                            <button class="opçao" onclick="goTo('aceitarlasnov');aumentar(Rezendeevil,5)">Aceitar a Lasanha</button>
+                        </div>
+                        <div>
+                            <button class="opçao" onclick="goTo('cena7')">Voltar a Explorar</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="aceitarlasnov">
+                <img class="Pesquerda" src="../imagens/Personagens/Rezendeevil.png" alt="Rezende">
+                <div class="falas">
+                    <p>[NomeProtagonista]: “Sabe de uma coisa? Vou aceitar sim! Parece que essa lasanha merece uma
+                        chance.”</p>
+                    <button class="pular" onclick="goTo('aceitarlasnov2')"></button>
+                </div>
+            </section>
+
+            <section id="aceitarlasnov2">
+                <img class="Pesquerda" src="../imagens/Personagens/Rezendeevil.png" alt="Rezende">
+                <div class="falas">
+                    <p>Rezendeevil: “Haha, sabia que cê ia mudar de ideia! Agora sim, cê vai provar minha obra-prima
+                        culinária!”</p>
+                    <button class="pular" onclick="goTo('aceitarlasnov3');aumentar(Rezendeevil,5)"></button>
+                </div>
+            </section>
+
+            <section id="aceitarlasnov3">
+                <img class="Pesquerda" src="../imagens/Personagens/Rezendeevil.png" alt="Rezende">
+                <div class="falas">
+                    <p>Você pega um pedaço da lasanha e, ao experimentar, percebe que realmente está muito boa. O cheiro
+                        e o tempero se confirmam na primeira mordida.</p>
+                    <p>[NomeProtagonista]: “Uau… sério, tá incrível! Nunca pensei que fosse dizer isso, mas… parabéns,
+                        Rezende!”</p>
+                    <p>Rezendeevil: “Viu só! Eu falei que estava melhorando! Acha que agora ganho o prêmio de chef da
+                        casa?”</p>
+                    <button class="pular" onclick="goTo('aceitarlasnov4');aumentar(Rezendeevil,5)"></button>
+                </div>
+            </section>
+
+            <section id="aceitarlasnov4">
+                <img class="Pdireita" src="../imagens/Personagens/Malena.png" alt="Malena">
+                <div class="falas">
+                    <p>Malena: “Tá, tá… não estrague esse momento de glória. Mas admito, tá muito melhor do que o
+                        normal.”</p>
+                    <p>Rezendeevil: “Valeu mesmo, [NomeProtagonista]! Cê salvou minha moral aqui na cozinha.”</p>
+                    <p>[NomeProtagonista]: “Imagina, valeu pelo convite. Posso pegar a receita depois?”</p>
+                    <button class="pular" onclick="goTo('aceitarlasnov5')"></button>
+                </div>
+            </section>
+
+            <section id="aceitarlasnov5">
+                <img class="Pesquerda" src="../imagens/Personagens/Rezendeevil.png" alt="Rezende">
+                <div class="falas">
+                    <p>Rezendeevil: “Pode sim! Mas segredo entre nós… não espalha, ou o Cellbit vai tentar inventar uma
+                        história de terror sobre lasanhas.”</p>
+                    <p>Malena: “Só não vai se empolgar e tentar cozinhar sozinho depois, hein. Já vi o desastre que isso
+                        dá.”</p>
+                    <button class="pular" onclick="goTo('cena7')"></button>
+                </div>
+            </section>
+
+            <section id="cenaSpok">
+                <div class="falas">
+                    <p>Seguindo por um rumo diferente e um pouco imprevisível, acabou decidindo ir em direção a um
+                        quarto aleatório enquanto subia até o segundo andar. O ideal não deveria ser ir para o próprio
+                        quarto?</p>
+                    <button class="pular" onclick="goTo('cenaSpok2')"></button>
+                </div>
+            </section>
+
+            <section id="cenaSpok2">
+                <div class="falas">
+                    <p>Quando a porta abria, uma figura se mostrava ali. Com um casaco verde com estampa de um creeper.
+                        Estava sentado na cadeira, aparentemente editando um vídeo para postar no próprio canal, mas
+                        logo se levantou e andou em sua direção.</p>
+                    <button class="pular" onclick="goTo('cenaSpok3')"></button>
+                </div>
+            </section>
+
+            <section id="cenaSpok3">
+                <img class="Pesquerda" src="../imagens/Personagens/Spok.png" alt="Spok">
+                <div class="falas">
+                    <p>Spok: “Opa, mano! Tudo bom contigo? Tu é o [NomeProtagonista], né não?”</p>
+                    <button class="pular" onclick="goTo('cenaSpok4')"></button>
+                </div>
+            </section>
+
+            <section id="cenaSpok4">
+                <img class="Pesquerda" src="../imagens/Personagens/Spok.png" alt="Spok">
+                <div class="falas">
+                    <p>[NomeProtagonista]: “Ah, isso mesmo! Eu sou o novo youtuber da casa, quem é você?”</p>
+                    <button class="pular" onclick="goTo('cenaSpok5')"></button>
+                </div>
+            </section>
+
+            <section id="cenaSpok5">
+                <img class="Pesquerda" src="../imagens/Personagens/Spok.png" alt="Spok">
+                <div class="falas">
+                    <p>Spok: “Sou o Spok! O famoso The Creeper Oficial, mestre do PVP e muito mais! Eu não ouvi muito
+                        sobre o que os seus vídeos são focados, mas dependendo a gente consegue até gravar juntos!”</p>
+                    <button class="pular" onclick="goTo('cenaSpok6')"></button>
+                </div>
+            </section>
+
+            <section id="cenaSpok6">
+                <img class="Pesquerda" src="../imagens/Personagens/Spok.png" alt="Spok">
+                <div class="falas">
+                    <div>
+                        <p>[NomeProtagonista]: “Claro, com certeza a gente pode gravar junto! Inclusive..”</p>
+                    </div>
+                    <div class="dopçao">
+                        <div>
+                            <button class="opçao" onclick="goTo('cenaSpok6.1');aumentar(Spok,5)">Sobre o Vídeo..</button>
+                        </div>
+                        <div>
+                            <button class="opçao" onclick="goTo('cenaSpok6.2');aumentar(Spok,5)">Sobre o Quarto..</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="cenaSpok6.1">
+                <img class="Pesquerda" src="../imagens/Personagens/Spok.png" alt="Spok">
+                <div class="falas">
+                    <p>[NomeProtagonista]: “Inclusive, eu tava pensando justamente em falar sobre isso! Meus vídeos são
+                        bem diversificados.”</p>
+                    <button class="pular" onclick="goTo('cenaSpok6.1.2')"></button>
+                </div>
+            </section>
+
+            <section id="cenaSpok6.1.2">
+                <img class="Pesquerda" src="../imagens/Personagens/Spok.png" alt="Spok">
+                <div class="falas">
+                    <p>Spok se aproxima com um sorriso animado.</p>
+                    <p>Spok: “Aí sim, mano! Curto demais quando a galera tem um estilo próprio. Dá pra gente fazer uns
+                        collabs brabos então! Já pensou? ‘The Creeper vs [NomeProtagonista]’ — vai dar bom no título!”
+                    </p>
+                    <button class="pular" onclick="goTo('cenaSpok6.1.3');aumentar(Spok,5)"></button>
+                </div>
+            </section>
+
+            <section id="cenaSpok6.1.3">
+                <img class="Pesquerda" src="../imagens/Personagens/Spok.png" alt="Spok">
+                <div class="falas">
+                    <p>[NomeProtagonista]: “Haha, gostei da ideia! Cê parece ser bem criativo com isso.”</p>
+                    <p>Spok: “Ih, rapaz… criatividade é o que não falta! Eu só não prometo ser bonzinho nas partidas,
+                        hein. Eu pego leve na edição, mas no PVP… nem tanto.”</p>
+                    <button class="pular" onclick="goTo('cenaSpok6.1.4');aumentar(Spok,5)"></button>
+                </div>
+            </section>
+
+            <section id="cenaSpok6.1.4">
+                <img class="Pesquerda" src="../imagens/Personagens/Spok.png" alt="Spok">
+                <div class="falas">
+                    <p>[NomeProtagonista]: “Desafio aceito, então!”</p>
+                    <p>Spok cruza os braços, rindo.</p>
+                    <p>Spok: “Boa! Já tô curtindo teu estilo. Ah, e quando quiser ajuda com setup, luz, edição, só
+                        chamar. Eu curto dar uma força pra quem tá começando na casa.”</p>
+                    <button class="opçao" onclick="goTo('cena8');trocarfundo('qt_protagonista');aumentar(Spok,5)"></button>
+                </div>
+            </section>
+
+            <section id="cenaSpok6.2">
+                <img class="Pesquerda" src="../imagens/Personagens/Spok.png" alt="Spok">
+                <div class="falas">
+                    <p>[NomeProtagonista]: “Na real, eu só tava andando por aí e acabei entrando aqui sem querer. Não
+                        era o meu quarto, né?”</p>
+                    <button class="pular" onclick="goTo('cenaSpok6.2.2')"></button>
+                </div>
+            </section>
+
+            <section id="cenaSpok6.2.2">
+                <img class="Pesquerda" src="../imagens/Personagens/Spok.png" alt="Spok">
+                <div class="falas">
+                    <p>Spok: “Haha! É, não exatamente. Mas relaxa, isso aqui parece um labirinto mesmo. Quando eu
+                        cheguei, me perdi três vezes tentando achar o banheiro.”</p>
+                    <p>[NomeProtagonista]: “Poxa, ainda bem que não sou o único. Achei que já ia começar com fama de
+                        invasor de quarto.”</p>
+                    <p>Spok dá uma risada e aponta para a cadeira.</p>
+                    <button class="pular" onclick="goTo('cenaSpok6.2.3');aumentar(Spok,5)"></button>
+                </div>
+            </section>
+
+            <section id="cenaSpok6.2.3">
+                <img class="Pesquerda" src="../imagens/Personagens/Spok.png" alt="Spok">
+                <div class="falas">
+                    <p>Spok: “Ah, tranquilo. Desde que você não mexa nos meus vídeos secretos, tá de boa.”</p>
+                    <p>[NomeProtagonista]: “Vídeos secretos?”</p>
+                    <p>Spok: “É… digamos que são experiências não publicáveis. Tipo tentativas falhas de speedrun,
+                        gritos no meio da madrugada e umas explosões suspeitas de TNT.”</p>
+                    <p>[NomeProtagonista]: “Beleza, prometo manter o segredo então.”</p>
+                    <button class="pular" onclick="goTo('cenaSpok6.2.4');aumentar(Spok,5)"></button>
+                </div>
+            </section>
+
+            <section id="cenaSpok6.2.4">
+                <img class="Pesquerda" src="../imagens/Personagens/Spok.png" alt="Spok">
+                <div class="falas">
+                    <p>Spok sorri e volta a sentar na cadeira.</p>
+                    <p>Spok: “Boa. E já que cê tá por aqui, quando quiser ajuda pra decorar teu quarto, posso dar uns
+                        toques. Só não deixa ele com aparência de prisão, hein!”</p>
+                    <button class="pular" onclick="goTo('cena8');trocarfundo('qt_protagonista')"></button>
+                </div>
+            </section>
+
+            <section id="cena8">
+                <div class="falas">
+                    <p>Depois de explorar a casa, finalmente me deparei com meu quarto, no segundo andar! Mas.. Não
+                        estava vazio. Na verdade, duas pessoas estavam lá, organizando o cômodo da melhor forma
+                        possível.</p>
+                    <button class="pular" onclick="goTo('cena8.2')"></button>
+                </div>
+            </section>
+
+            <section id="cena8">
+                <img class="Pesquerda" src="../imagens/Personagens/Pac.png" alt="Pac">
+                <div class="falas">
+                    <p>Pac: “Bora Mike, rápido! Se o novo membro da casa chegar antes da gente terminar de arrumar o
+                        quarto, ferrou!”</p>
+                    <button class="pular" onclick="goTo('cena8.2')"></button>
+                </div>
+            </section>
+
+            <section id="cena8.2">
+                <img class="Pdireita" src="../imagens/Personagens/Mike.png" alt="Mike">
+                <div class="falas">
+                    <p>Mike: “Num me apressa não, moço! Tá doido é? Não é fácil ficar ajeitando tudo aqui não, calma
+                        aí!”</p>
+                    <button class="pular" onclick="goTo('cena8.3')"></button>
+                </div>
+            </section>
+
+            <section id="cena8.3">
+                <div class="falas">
+                    <div>
+                        O que eu deveria fazer agora?
+                    </div>
+                    <div class="dopçao">
+                        <div>
+                            <button style="width: 240px;" class="opçao" onclick="goTo('cena8.4');aumentar(Mike,5)">“Precisam de
+                                ajuda?”</button>
+                        </div>
+                        <div>
+                            <button style="width: 240px;" class="opçao" onclick="goTo('cena8.5');aumentar(Pac,5)">Ajudar sem falar
+                                nada</button>
+                        </div>
+                        <div>
+                            <button style="width: 240px;" class="opçao" onclick="goTo('cena8.6')">Se manter
+                                calado</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="cena8.4">
+                <div class="falas">
+                    <p>[NomeProtagonista]: “Ei, pessoal… precisam de ajuda aí? Posso dar uma mão.”</p>
+                    <button class="pular" onclick="goTo('cena8.4.1')"></button>
+                </div>
+            </section>
+
+            <section id="cena8.4.1">
+                <div class="falas">
+                    <p>Pac e Mike congelam por um segundo, e Pac olha pra você com um sorriso meio sem graça.</p>
+                    <button class="pular" onclick="goTo('cena8.4.2')"></button>
+                </div>
+            </section>
+
+            <section id="cena8.4.2">
+                <img class="Pesquerda" src="../imagens/Personagens/Pac.png" alt="Pac">
+                <div class="falas">
+                    <p>Pac: “Ah, caramba! Cê que é o novo, né? A gente tava tentando deixar tudo bonito antes de você
+                        chegar, mas parece que fomos pegos no flagra.”</p>
+                    <button class="pular" onclick="goTo('cena8.4.3');aumentar(Pac,5)"></button>
+                </div>
+            </section>
+
+            <section id="cena8.4.3">
+                <img class="Pdireita" src="../imagens/Personagens/Mike.png" alt="Mike">
+                <div class="falas">
+                    <p>Mike: “Pego no flagra? Eu tô aqui ralando igual um condenado! Ele chegou é cedo demais!”</p>
+                    <p>[NomeProtagonista]: “Cedo demais? Já tá escurecendo!”</p>
+                    <button class="pular" onclick="goTo('cena8.4.4');aumentar(Mike,5)"></button>
+                </div>
+            </section>
+
+            <section id="cena8.4.4">
+                <img class="Pesquerda" src="../imagens/Personagens/Pac.png" alt="Pac">
+                <div class="falas">
+                    <p>Pac ri, cruzando os braços.</p>
+                    <p>Pac: “Pois é… cedo demais pro padrão do Mike. Mas se quiser ajudar, aceita o risco: a última vez
+                        que ele tentou montar uma mesa, ela virou uma catapulta.”</p>
+                    <button class="pular" onclick="goTo('cena8.4.5')"></button>
+                </div>
+            </section>
+
+            <section id="cena8.4.5">
+                <img class="Pdireita" src="../imagens/Personagens/Mike.png" alt="Mike">
+                <div class="falas">
+                    <p>Mike: “Foi um acidente tático, rapaz! Estratégia avançada de montagem reversa!”</p>
+                    <p>[NomeProtagonista]: “Aham… tá explicado então.”</p>
+                    <button class="pular" onclick="goTo('cena9')"></button>
+                </div>
+            </section>
+
+            <section id="cena8.5">
+                <div class="falas">
+                    <p>Sem dizer uma palavra, você se aproxima, pega uma das caixas e começa a empurrar a cômoda pro
+                        canto certo.</p>
+                    <p>Pac e Mike trocam olhares surpresos.</p>
+                    <button class="pular" onclick="goTo('cena8.5.2')"></button>
+                </div>
+            </section>
+
+            <section id="cena8.5.2">
+                <img class="Pdireita" src="../imagens/Personagens/Mike.png" alt="Mike">
+                <div class="falas">
+                    <p>Mike: “Olha aí, Pac! O novo é trabalhador, rapaz! Nem falou nada e já tá na ativa!”</p>
+                    <p>Pac: “Finalmente alguém que entende o sofrimento da faxina sem precisar reclamar primeiro.”</p>
+                    <button class="pular" onclick="goTo('cena8.5.3')"></button>
+                </div>
+            </section>
+
+            <section id="cena8.5.3">
+                <img class="Pesquerda" src="../imagens/Personagens/Pac.png" alt="Pac">
+                <div class="falas">
+                    <p>[NomeProtagonista]: “Achei que fosse melhor ajudar do que ficar só olhando.”</p>
+                    <p>Pac: “Boa! Gostei da atitude. Cuidado só pra não mexer naquele fio ali — a última vez que o Mike
+                        encostou, o disjuntor da casa pediu aposentadoria.”</p>
+                    <button class="pular" onclick="goTo('cena8.5.4');aumentar(Pac,5)"></button>
+                </div>
+            </section>
+
+            <section id="cena8.5.4">
+                <img class="Pdireita" src="../imagens/Personagens/Mike.png" alt="Mike">
+                <div class="falas">
+                    <p>Mike: “Ei! Aquilo foi interferência espiritual!”</p>
+                    <p>Pac: “Foi tua falta de coordenação mesmo.”</p>
+                    <p>Ambos riem enquanto você termina de organizar o quarto.</p>
+                    <button class="pular" onclick="goTo('cena9');aumentar(Mike,5)"></button>
+                </div>
+            </section>
+
+            <section id="cena8.6">
+                <div class="falas">
+                    <p>Você fica parado na porta, observando enquanto Pac e Mike continuam discutindo sobre onde colocar
+                        a cama.</p>
+                    <button class="pular" onclick="goTo('cena8.6.2')"></button>
+                </div>
+            </section>
+
+            <section id="cena8.6.2">
+                <img class="Pesquerda" src="../imagens/Personagens/Pac.png" alt="Pac">
+                <div class="falas">
+                    <p>Pac: “Aí, Mike, essa cama tá torta!”</p>
+                    <p>Mike: “Não tá torta não, é o chão que tá inclinado, pô!”</p>
+                    <p>Pac: “Ah, claro, o chão da casa é que tá torto, lógico.”</p>
+                    <button class="pular" onclick="goTo('cena8.6.3')"></button>
+                </div>
+            </section>
+
+            <section id="cena8.6.3">
+                <img class="Pdireita" src="../imagens/Personagens/Mike.png" alt="Mike">
+                <div class="falas">
+                    <p>Mike: “Ué… quem é tu?”</p>
+                    <p>Pac: “Ah, não acredito. O novo já tá aqui e a gente nem terminou!”</p>
+                    <p>[NomeProtagonista]: “Foi mal… achei melhor não atrapalhar.”</p>
+                    <button class="pular" onclick="goTo('cena8.6.4')"></button>
+                </div>
+            </section>
+
+            <section id="cena8.6.4">
+                <img class="Pesquerda" src="../imagens/Personagens/Pac.png" alt="Pac">
+                <div class="falas">
+                    <p>Pac solta uma risadinha cansada.</p>
+                    <p>Pac: “Relaxa, cê não atrapalhou não. A gente é que se enrola sozinho mesmo.”</p>
+                    <p>Mike: “É… tipo dois pinguins tentando montar uma barraca de camping.”</p>
+                    <button class="pular" onclick="goTo('cena9')"></button>
+                </div>
+            </section>
+
+            <section id="cena9">
+                <div class="falas">
+                    <div>
+                        <p>[NomeProtagonista]: “Finalmente um descanso.. Ou eu deveria andar por aí?”</p>
+                    </div>
+                    <div class="dopçao">
+                        <div>
+                            <button class="opçao" onclick="goTo('cena10');trocarfundo('fundopreto')">Ir Dormir</button>
+                        </div>
+                        <div>
+                            <button class="opçao" onclick="goTo('sair')">Sair do Quarto</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="sair">
+            <div class="falas">
+                <div>
+                    <p>[NomeProtagonista]: “E aí, ir pra onde agora então?”</p>
+                </div>
+                <div class="dopçao">
+                    <div>
+                        <button style="width: 240px;" class="opçao" onclick="goTo('cenaPiscina6');trocarfundo('piscina')">Ir para Piscina</button>
+                    </div>
+                    <div>
+                        <button style="width: 240px;" class="opçao" onclick="goTo('cenaCozinha5');trocarfundo('cozinha')">Ir para Cozinha</button>
+                    </div>
+                    <div>
+                        <button style="width: 240px;" class="opçao" onclick="goTo('cenaSala1');trocarfundo('sala')">Ir para Sala</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+            <section id="cenaPiscina6">
+            <div class="falas">
+                <div>
+                    <p>Chegando na piscina, vejo algumas pessoas.</p>
+                </div>
+                <div class="dopçao">
+                    <div>
+                        <button style="width: 240px;" class="opçao" onclick="goTo('voltarPiscina')">Voltar</button>
+                    </div>
+                    <div>
+                        <button style="width: 240px;" class="opçao" onclick="goTo('cenaFebatista1')">Conversar com Febatista</button>
+                    </div>
+                    <div>
+                        <button style="width: 240px;" class="opçao" onclick="goTo('cenaRezende1')">Conversar com Rezende</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+            <section id="cenaFebatista1">
+                <img class="Pesquerda" src="../imagens/Personagens/Febatista.png" alt="Febatista">
+                <div class="falas">
+                    <p>Sentado à beira da piscina, balançando as pernas dentro d’água, estava Febatista, com uma garrafinha de refrigerante na mão. Assim que ele te vê chegando, abre um sorriso automático.</p>
+                    <p>Febatista: “ÔÔÔ! Olha só quem apareceu! Tava te procurando lá dentro, achei que tivesse sido sequestrado pelo Cellbit pra algum ARG.”</p>
+                    <button class="pular" onclick="goTo('cenaFebatista2')"></button>
+                </div>
+            </section>
+            
+            <section id="cenaFebatista2">
+                <img class="Pesquerda" src="../imagens/Personagens/Febatista.png" alt="Febatista">
+                <div class="falas">
+                    <p>[NomeProtagonista]: “Eu só precisava de um pouco de ar. A festa lá dentro tá caótica demais.”</p>
+                    <p>Febatista: “Normal. O Felps escorregou no próprio sorvete hoje. Duas vezes.”</p>
+                    <button class="pular" onclick="goTo('cenaFebatista3');aumentar(Febatista,5)"></button>
+                </div>
+            </section>
+
+            <section id="cenaFebatista3">
+                <img class="Pesquerda" src="../imagens/Personagens/Febatista.png" alt="Febatista">
+                <div class="falas">
+                    <p>[NomeProtagonista]: “Meu Deus…”</p>
+                    <p>Febatista: “Cara, ficar aqui é mil vezes mais tranquilo. A água faz aquele som de ‘shhhh’… meu cérebro até agradece.”</p>
+                    <p>Ele tenta fazer uma pose de meditação… e quase cai pra trás.</p>
+                    <button class="pular" onclick="goTo('cenaFebatista4');aumentar(Febatista,5)"></button>
+                </div>
+            </section>
+
+            <section id="cenaFebatista4">
+                <img class="Pesquerda" src="../imagens/Personagens/Febatista.png" alt="Febatista">
+                <div class="falas">
+                    <p>[NomeProtagonista]: “Cuidado aí!”</p>
+                    <p>Febatista: “Relaxa! Esse é meu limite espiritual.”</p>
+                    <p>Vocês dois riem, enquanto ele olha para a água com um sorriso leve.</p>
+                    <button class="pular" onclick="goTo('cenaFebatista5');aumentar(Febatista,5)"></button>
+                </div>
+            </section>
+
+            <section id="cenaFebatista5">
+                <img class="Pesquerda" src="../imagens/Personagens/Febatista.png" alt="Febatista">
+                <div class="falas">
+                    <p>Febatista: “Mas ó… tá mandando bem. Chegou faz pouco tempo e já tá pegando o ritmo da casa.”</p>
+                    <p>[NomeProtagonista]: “É graças a vocês. Você me ajudou desde o começo.”</p>
+                    <button class="pular" onclick="goTo('cenaFebatista6')"></button>
+                </div>
+            </section>
+
+            <section id="cenaFebatista6">
+                <img class="Pesquerda" src="../imagens/Personagens/Febatista.png" alt="Febatista">
+                <div class="falas">
+                    <p>Febatista: “Tamo junto sempre, tá? Qualquer coisa que precisar, só me chamar.”</p>
+                    <p>Ele ergue a garrafinha num brinde improvisado.</p>
+                    <p>Febatista: “Ao caos dessa casa. E ao [NomeProtagonista], que tá aguentando.”</p>
+                    <p>[NomeProtagonista]: “Ao caos.”</p>
+                    <button class="pular" onclick="goTo('cenaPiscina6');aumentar(Febatista,5)"></button>
+                </div>
+            </section>
+
+            <section id="cenaRezende1">
+                <img class="Pdireita" src="../imagens/Personagens/Rezendeevil.png" alt="Rezende">
+                <div class="falas">
+                    <p>Rezende estava encostado na borda da piscina, deixando a água subir até o peito enquanto mexia no celular com uma mão só. Assim que percebe sua presença, ele levanta o olhar e dá um sorriso rápido.</p>
+                    <p>Rezende: “Opa! Olha quem deu o ar da graça. Pensei que você tivesse sumido com o pessoal lá de dentro.”</p>
+                    <button class="pular" onclick="goTo('cenaRezende2')"></button>
+                </div>
+            </section>
+
+            <section id="cenaRezende2">
+                <img class="Pdireita" src="../imagens/Personagens/Rezendeevil.png" alt="Rezende">
+                <div class="falas">
+                    <p>Ele deixa o celular de lado por um momento, apoiando os braços na borda da piscina. Sua expressão é relaxada, mas claramente curiosa.</p>
+                    <p>Rezende: “E aí, tá curtindo a casa? O povo aqui é meio doido… mas no bom sentido, eu acho.”</p>
+                    <button class="pular" onclick="goTo('cenaRezende3');aumentar(Rezendeevil,5)"></button>
+                </div>
+            </section>
+
+            <section id="cenaRezende3">
+                <img class="Pdireita" src="../imagens/Personagens/Rezendeevil.png" alt="Rezende">
+                <div class="falas">
+                    <p>Ele dá uma pequena risada, balançando leve a água com a mão.</p>
+                    <p>Rezende: “Mas e você? Veio só dar uma volta ou tava realmente me procurando?”</p>
+                    <p>[NomeProtagonista]: “Na verdade… eu tava te procurando. Queria um tempo longe da festa e achei que aqui seria mais tranquilo.”</p>
+                    <button class="pular" onclick="goTo('cenaRezende4');aumentar(Rezendeevil,5)"></button>
+                </div>
+            </section>
+
+            <section id="cenaRezende4">
+                <img class="Pdireita" src="../imagens/Personagens/Rezendeevil.png" alt="Rezende">
+                <div class="falas">
+                    <p>Rezende passa a mão pelos cabelos molhados, jogando a água pra trás enquanto te observa com um olhar mais atento.</p>
+                    <p>Rezende: “Porque, se for o segundo caso… bom, eu não reclamo não. Companhia é sempre bem-vinda.”</p>
+                    <p>[NomeProtagonista]: “Então parece que escolhi o lugar certo pra me esconder da festa.”</p>
+                    <button class="pular" onclick="goTo('cenaRezende5')"></button>
+                </div>
+            </section>
+
+            <section id="cenaRezende5">
+                <img class="Pdireita" src="../imagens/Personagens/Rezendeevil.png" alt="Rezende">
+                <div class="falas">
+                    <p>Ele se ajeita na água, se aproximando alguns passos da borda, como se quisesse te ouvir melhor.</p>
+                    <p>Rezende: “Aliás… você tá curtindo a galera daqui? A adaptação tá indo de boa?”</p>
+                    <p>[NomeProtagonista]: “Tá sendo mais fácil do que eu imaginava, principalmente porque você e o Febatista me ajudaram bastante.”</p>
+                    <button class="pular" onclick="goTo('cenaRezende6')"></button>
+                </div>
+            </section>
+
+            <section id="cenaRezende6">
+                <img class="Pdireita" src="../imagens/Personagens/Rezendeevil.png" alt="Rezende">
+                <div class="falas">
+                    <p>Rezende dá um sorriso leve, sincero, relaxando novamente enquanto deixa o corpo boiar um pouco.</p>
+                    <p>Rezende: “Qualquer coisa que você precisar… só falar comigo, fechou? A casa é grande e a galera fala demais. Sempre bom ter alguém pra dar um help.”</p>
+                    <p>[NomeProtagonista]: “Valeu, pode deixar. Fico feliz de ter alguém confiável por perto.”</p>
+                    <button class="pular" onclick="goTo('cenaPiscina6')"></button>
+                </div>
+            </section>
+
+            <section id="cenaCozinha5">
+            <div class="falas">
+                <div>
+                    <p>Chegando na cozinha, vejo algumas pessoas.</p>
+                </div>
+                <div class="dopçao">
+                    <div>
+                        <button style="width: 240px;" class="opçao" onclick="goTo('voltarCozinha')">Voltar</button>
+                    </div>
+                    <div>
+                        <button style="width: 240px;" class="opçao" onclick="goTo('cenaAuthentic1')">Conversar com Authentic</button>
+                    </div>
+                    <div>
+                        <button style="width: 240px;" class="opçao" onclick="goTo('cenaJazz1.2')">Conversar com Jazzghost</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+            <section id="cenaAuthentic1">
+                <img class="Pdireita" src="../imagens/Personagens/Authentic.png" alt="Authentic">
+                <div class="falas">
+                    <p>Na cozinha, Authentic estava mexendo em alguns ingredientes, parecendo concentrado em preparar algo, mas imediatamente levantou o olhar ao te ver entrar.</p>
+                    <p>Authentic: “Opa! Olha só quem resolveu dar as caras. Tá com fome ou só veio observar minha aula de culinária?”</p>
+                    <p>[NomeProtagonista]: “Um pouco dos dois, acho. Não queria me meter, mas o cheiro daqui é irresistível.”</p>
+                    <button class="pular" onclick="goTo('cenaAuthentic2');aumentar(Authentic,5)"></button>
+                </div>
+            </section>
+
+            <section id="cenaAuthentic2">
+                <img class="Pdireita" src="../imagens/Personagens/Authentic.png" alt="Authentic">
+                <div class="falas">
+                    <p>Authentic sorri, pegando uma colher para provar rapidamente o que estava preparando.</p>
+                    <p>Authentic: “Hahaha, então é isso! Se prepara, porque essa receita vai ser lendária. Mas me diz, [NomeProtagonista], como tá sendo se acostumar com a bagunça dessa casa?”</p>
+                    <p>[NomeProtagonista]: “Tá sendo divertido. Confesso que é uma loucura, mas você e o pessoal me ajudaram a me sentir em casa rápido.”</p>
+                    <button class="pular" onclick="goTo('cenaAuthentic3')"></button>
+                </div>
+            </section>
+
+            <section id="cenaAuthentic3">
+                <img class="Pdireita" src="../imagens/Personagens/Authentic.png" alt="Authentic">
+                <div class="falas">
+                    <p>Ele dá uma risadinha, balançando a cabeça.</p>
+                    <p>Authentic: “Isso aí! Boa! É sempre bom ter alguém novo que não corre desesperado do caos. Sério, você tá se saindo bem.”</p>
+                    <p>[NomeProtagonista]: “Valeu, Authentic. É bom saber que posso contar com alguém por aqui.”</p>
+                    <button class="pular" onclick="goTo('cenaCozinha5');aumentar(Authentic,5)"></button>
+                </div>
+            </section>
+
+            <section id="cenaJazz1.2">
+                <img class="Pdireita" src="../imagens/Personagens/Jazzghost.png" alt="Jazzghost">
+                <div class="falas">
+                    <p>Jazzghost estava encostado no balcão da cozinha, mexendo em alguns ingredientes enquanto cantava baixinho uma música qualquer. Ao perceber sua presença, ele ergueu a cabeça e sorriu.</p>
+                    <p>Jazzghost: “E aí! Olha só quem resolveu aparecer. Vem provar minhas habilidades culinárias ou só veio atrapalhar?”</p>
+                    <p>[NomeProtagonista]: “Habilidades culinárias? Melhor eu ficar de olho, então… ou vou acabar ajudando mais do que comendo.”</p>
+                    <button class="pular" onclick="goTo('cenaJazz2.2')"></button>
+                </div>
+            </section>
+
+            <section id="cenaJazz2.2">
+                <img class="Pdireita" src="../imagens/Personagens/Jazzghost.png" alt="Jazzghost">
+                <div class="falas">
+                    <p>Ele dá uma risada, pegando uma faca para cortar alguns legumes.</p>
+                    <p>Jazzghost: “Hahaha, relaxa! Eu me viro bem. Mas me diz, [NomeProtagonista], como tá sendo se adaptar à loucura dessa casa?”</p>
+                    <p>[NomeProtagonista]: “Tá sendo divertido, mas definitivamente uma loucura. Vocês todos têm uma energia que não deixa ninguém entediado.”</p>
+                    <button class="pular" onclick="goTo('cenaJazz3.2');aumentar(jazzghost,5)"></button>
+                </div>
+            </section>
+
+            <section id="cenaJazz3.2">
+                <img class="Pdireita" src="../imagens/Personagens/Jazzghost.png" alt="Jazzghost">
+                <div class="falas">
+                    <p>Jazzghost cruza os braços e sorri, balançando a cabeça de leve.</p>
+                    <p>Jazzghost: “É, essa é a ideia. Aqui ninguém dorme no ponto. Mas olha, bom ter alguém que entra no clima e não foge correndo.”</p>
+                    <p>[NomeProtagonista]: “Pode contar comigo, Jazz. Vou tentar me manter no ritmo da casa.”</p>
+                    <button class="pular" onclick="goTo('cenaCozinha5');aumentar(jazzghost,5)"></button>
+                </div>
+            </section>
+
+            <section id="cenaSala1">
+            <div class="falas">
+                <div>
+                    <p>Chegando na sala, vejo algumas pessoas.</p>
+                </div>
+                <div class="dopçao">
+                    <div>
+                        <button style="width: 240px;" class="opçao" onclick="goTo('voltarSala')">Voltar</button>
+                    </div>
+                    <div>
+                        <button style="width: 240px;" class="opçao" onclick="goTo('cenaMikePac1')">Conversar com Pac e Mike</button>
+                    </div>
+                    <div>
+                        <button style="width: 240px;" class="opçao" onclick="goTo('cenaMalena1')">Conversar com Malena</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+            <section id="cenaMikePac1">
+            <img class="Pdireita" src="../imagens/Personagens/Pac.png" alt="Pac">
+                <div class="falas">
+                    <p>Ao entrar na sala, você encontra Pac e Mike organizando algumas coisas espalhadas pelo chão.</p>
+                    <p>Pac: “Bora, Mike! Rápido! Se o novo membro da casa chegar antes da gente terminar de arrumar o quarto, ferrou!”</p>
+                    <p>Mike: “Num me apressa não, moço! Não é fácil ajeitar tudo assim de primeira, calma aí!”</p>
+                    <p>[NomeProtagonista]: “Oi, pessoal! Precisam de uma mãozinha?”</p>
+                    <button class="pular" onclick="goTo('cenaMikePac2');aumentar(Pac,5)"></button>
+                </div>
+            </section>
+
+            <section id="cenaMikePac2">
+            <img class="Pdireita" src="../imagens/Personagens/Pac.png" alt="Pac">
+                <div class="falas">
+                    <p>Pac suspira, apoiando as mãos nos quadris, olhando para você.</p>
+                    <p>Pac: “Ah, então você veio mesmo pra ajudar? Finalmente alguém que não só observa!”</p>
+                    <p>[NomeProtagonista]: “Pois é, achei que seria melhor dar uma mão. Não quero atrapalhar.”</p>
+                    <button class="pular" onclick="goTo('cenaMikePac3');aumentar(Mike,5)"></button>
+                </div>
+            </section>
+
+            <section id="cenaMikePac3">
+            <img class="Pesquerda" src="../imagens/Personagens/Mike.png" alt="Mike">
+                <div class="falas">
+                    <p>Mike dá uma risadinha, enquanto pega alguns objetos do chão.</p>
+                    <p>Mike: “Tá bom, mas não vai se perder aqui não, hein? A bagunça é grande e eu já tô acostumado a esse caos.”</p>
+                    <p>[NomeProtagonista]: “Pode deixar, vou ficar esperto e seguir vocês. Só me diga por onde começar.”</p>
+                    <button class="pular" onclick="goTo('cenaMikePac4');aumentar(Pac,5)"></button>
+                </div>
+            </section>
+
+            <section id="cenaMikePac4">
+            <img class="Pdireita" src="../imagens/Personagens/Pac.png" alt="Pac">
+                <div class="falas">
+                    <p>Pac aponta para uma pilha de almofadas e roupas espalhadas.</p>
+                    <p>Pac: “Começa organizando isso aqui, depois a gente vê o resto. Se fizer rápido, talvez até role um lanche depois.”</p>
+                    <p>[NomeProtagonista]: “Fechado! Vou colocar tudo no lugar.”</p>
+                    <button class="pular" onclick="goTo('cenaSala1');aumentar(Mike,5)"></button>
+                </div>
+            </section>
+
+            <section id="cenaMalena1">
+            <img class="Pdireita" src="../imagens/Personagens/Malena.png" alt="Malena">
+                <div class="falas">
+                    <p>Ao entrar na sala, você encontra Malena sentada no sofá, mexendo no celular.</p>
+                    <p>Malena: “E aí! Olha quem resolveu aparecer. Já tá se acostumando com a bagunça dessa casa ou ainda tá perdido?”</p>
+                    <p>[NomeProtagonista]: “Ainda me acostumando, mas tá sendo divertido. E você, sempre tão organizada em meio ao caos?”</p>
+                    <button class="pular" onclick="goTo('cenaMalena2')"></button>
+                </div>
+            </section>
+
+            <section id="cenaMalena2">
+            <img class="Pdireita" src="../imagens/Personagens/Malena.png" alt="Malena">
+                <div class="falas">
+                    <p>Malena dá uma risadinha, cruzando as pernas e apoiando o cotovelo no braço do sofá.</p>
+                    <p>Malena: “Hahaha, eu tento! Mas olha, se depender só de mim, a casa seria um caos completo. E você, tá conseguindo se virar bem com todo mundo?”</p>
+                    <p>[NomeProtagonista]: “Tá indo. A galera é meio doida, mas ajuda bastante. Principalmente você e o Rezende, que deram uma força no começo.”</p>
+                    <button class="pular" onclick="goTo('cenaMalena3');aumentar(Malena,5)"></button>
+                </div>
+            </section>
+
+            <section id="cenaMalena3">
+            <img class="Pdireita" src="../imagens/Personagens/Malena.png" alt="Malena">
+                <div class="falas">
+                    <p>Ela dá um pequeno sorriso, balançando a cabeça.</p>
+                    <p>Malena: “Bom saber! É sempre bom ter alguém novo que se encaixa sem reclamar demais. Olha, se precisar de dicas pra não se perder aqui, é só falar comigo.”</p>
+                    <p>[NomeProtagonista]: “Valeu, Malena. Vou lembrar disso.”</p>
+                    <button class="pular" onclick="goTo('cenaSala1');aumentar(Malena,5)"></button>
+                </div>
+            </section>
+
+            <section id="voltarCozinha">
+            <div class="falas">
+                <div>
+                    <p>[NomeProtagonista]: “E aí, ir pra onde agora então?”</p>
+                </div>
+                <div class="dopçao">
+                    <div>
+                        <button style="width: 240px;" class="opçao" onclick="goTo('cenaPiscina6');trocarfundo('piscina')">Ir para Piscina</button>
+                    </div>
+                    <div>
+                        <button style="width: 240px;" class="opçao" onclick="goTo('cena9');trocarfundo('qt_protagonista')">Ir para o Quarto</button>
+                    </div>
+                    <div>
+                        <button style="width: 240px;" class="opçao" onclick="goTo('cenaSala1');trocarfundo('sala')">Ir para Sala</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+            <section id="voltarPiscina">
+            <div class="falas">
+                <div>
+                    <p>[NomeProtagonista]: “E aí, ir pra onde agora então?”</p>
+                </div>
+                <div class="dopçao">
+                    <div>
+                        <button style="width: 240px;" class="opçao" onclick="goTo('cena9');trocarfundo('qt_protagonista')">Ir para o Quarto</button>
+                    </div>
+                    <div>
+                        <button style="width: 240px;" class="opçao" onclick="goTo('cenaCozinha5');trocarfundo('cozinha')">Ir para Cozinha</button>
+                    </div>
+                    <div>
+                        <button style="width: 240px;" class="opçao" onclick="goTo('cenaSala1');trocarfundo('sala')">Ir para Sala</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+            <section id="voltarSala">
+            <div class="falas">
+                <div>
+                    <p>[NomeProtagonista]: “E aí, ir pra onde agora então?”</p>
+                </div>
+                <div class="dopçao">
+                    <div>
+                        <button style="width: 240px;" class="opçao" onclick="goTo('cenaPiscina6');trocarfundo('piscina')">Ir para Piscina</button>
+                    </div>
+                    <div>
+                        <button style="width: 240px;" class="opçao" onclick="goTo('cenaCozinha5');trocarfundo('cozinha')">Ir para Cozinha</button>
+                    </div>
+                    <div>
+                        <button style="width: 240px;" class="opçao" onclick="goTo('cena9');trocarfundo('qt_protagonista')">Ir para o Quarto</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+            <section id="cena10">
+                <div class="falas">
+                    <p>[NomeProtagonista]: “Tá… acho que agora já dá pra respirar um pouco. Já faz o quê? Algumas semanas desde que eu cheguei nessa casa. Parece que faz uns três anos, pra ser sincero.”</p>
+                    <button class="pular" onclick="goTo('cena11')"></button>
+                </div>
+            </section>
+            
+            <section id="cena11">
+                <div class="falas">                  
+                    <p>[NomeProtagonista]: “Eu achava que conviver com outros criadores de conteúdo ia ser… sei lá, normal? Tranquilo? Mas, cara… aqui é um zoológico digital. E eu digo isso com carinho, claro.”</p>  
+                    <button class="pular" onclick="goTo('cena12')"></button>
+                </div>
+            </section>
+
+            <section id="cena11">
+                <div class="falas">
+                    <p>[NomeProtagonista]: “O Cellbit continua me tratando como se eu fosse um NPC suspeito. Acho que, se eu tossir perto dele, ele abre um ARG novo.”</p>
+                    <p>[NomeProtagonista]: “Felps? Bom, ele já me deu boas risadas. Outro dia ele travou tentando falar ‘psicólogo’ e ficou repetindo ‘piscólogo’ por dois minutos. Eu chorei de rir.”</p>                  
+                    <button class="pular" onclick="goTo('cena12')"></button>
+                </div>
+            </section>
+
+            <section id="cena12">
+                <div class="falas">
+                    <p>[NomeProtagonista]: “Authentic… é o cara mais gente boa do planeta. Ele me emprestou uma blusa ontem. Pena que era tamanho infantil.”</p>
+                    <p>[NomeProtagonista]: “Jazz… ainda fico com receio de irritar ele. Mas o cara é firmeza. Só precisa de café e paciência.”</p>                  
+                    <button class="pular" onclick="goTo('cena13')"></button>
+                </div>
+            </section>
+
+            <section id="cena13">
+                <div class="falas">
+                    <p>[NomeProtagonista]: “Pac e Mike… mano… esses dois deviam ser proibidos de montar móveis. Eles tentaram arrumar a cozinha e, de alguma forma, conseguiram fazer a geladeira travar o micro-ondas. Físicos devem ter chorado sangue nesse dia.”</p>
+                    <p>[NomeProtagonista]: “Spok me prometeu uma gravação conjunta. Só que, até agora, toda vez que eu vou no quarto dele, ele tá editando. Sério, acho que aquele cara passa mais tempo rodando Premiere do que dormindo.”</p>                  
+                    <button class="pular" onclick="goTo('cena14')"></button>
+                </div>
+            </section>
+
+            <section id="cena14">
+                <div class="falas">        
+                    <p>[NomeProtagonista]: “Sabe… apesar de todo caos, briga, zoeira, susto… eu acho que eu precisava disso. Não sei… tudo aqui é tão… vivo. Tão imprevisível.”</p>
+                    <p>[NomeProtagonista]: “E eu tô começando a me sentir parte disso.”</p>
+                    <p>[NomeProtagonista]: “O mais importante.. Eu deveria escolher quem?”</p>          
+                    <button class="pular" onclick="goTo('escolhafinal');trocarfundo('balada')"></button>
+                </div>
+            </section>
+
+            <section id="escolhafinal">
+            <h1>Quem você vai chamar pra dançar?</h1>
+                <div id="fin">
+                <div id="escolhaP">
+
+                    <!-- FEBATISTA -->
+                    <button id="b1" onclick="goTo('escolhaFebatista1')" style="display:none;">
+                        Febatista
+                    </button>
+
+                    <!-- CELLBIT -->
+                    <button id="b2" onclick="goTo('escolhaCellbit1')" style="display:none;">
+                        Cellbit
+                    </button>
+
+                    <!-- AUTHENTIC -->
+                    <button id="b3" onclick="goTo('escolhaAuthentic1')" style="display:none;">
+                        Authentic
+                    </button>
+
+                    <!-- FELPS -->
+                    <button id="b4" onclick="goTo('escolhaFelps1')" style="display:none;">
+                        Felps
+                    </button>
+
+                    <!-- JAZZGHOST -->
+                    <button id="b5" onclick="goTo('escolhaJazz1')" style="display:none;">
+                        Jazzghost
+                    </button>
+
+                    <!-- MALENA -->
+                    <button id="b6" onclick="goTo('escolhaMalena1')" style="display:none;">
+                        Malena
+                    </button>
+
+                    <!-- MIKE -->
+                    <button id="b7" onclick="goTo('escolhaMike1')" style="display:none;">
+                    Mike
+                    </button>
+
+                    <!-- PAC -->
+                    <button id="b8" onclick="goTo('escolhaPac1')" style="display:none;">
+                    Pac
+                    </button>
+
+                    <!-- REZENDEEIVIL -->
+                    <button id="b9" onclick="goTo('escolhaRezende1')" style="display:none;">
+                    Rezendeevil
+                    </button>
+
+                    <!-- SPOK -->
+                    <button id="b10" onclick="goTo('escolhaSpok1')" style="display:none;">
+                    Spok
+                    </button>
+
+                </div>
+            </div>
+        </section>
+
+            <section id="escolhaFebatista1">
+                <img class="Pdireita" src="../imagens/Personagens/Febatista.png" alt="Febatista">
+                <div class="falas">
+                    <p>[NomeProtagonista]: “Ei, Febatista! Que tal dançarmos um pouco? A pista tá pegando fogo!”</p>
+                    <p>Febatista ergue a sobrancelha, surpreso, e solta uma risada.</p>
+                    <p>Febatista: “Hahaha, você tá me chamando pra dançar mesmo? Tá confiante, hein!”</p>
+                    <button class="pular" onclick="goTo('escolhaFebatista2')"></button>
+                </div>
+            </section>
+
+            <section id="escolhaFebatista2">
+            <img class="Pdireita" src="../imagens/Personagens/Febatista.png" alt="Febatista">
+                <div class="falas">
+                    <p>Febatista se aproxima e apoia a mão no seu ombro, sorrindo.</p>
+                    <p>Febatista: “Tá bom, você me convenceu. Mas aviso logo: eu danço melhor do que você imagina!”</p>
+                    <p>[NomeProtagonista]: “Então vamos ver se você consegue me acompanhar!”</p>
+                    <button class="pular" onclick="goTo('escolhaFebatista3')"></button>
+                </div>
+            </section>
+
+            <section id="escolhaFebatista3">
+            <img class="Pdireita" src="../imagens/Personagens/Febatista.png" alt="Febatista">
+                <div class="falas">
+                    <p>Vocês entram na pista de dança, a música pulsa ao redor e a multidão se move no ritmo da batida.</p>
+                    <p>Febatista: “Olha só, você até que se garante! Acho que formamos uma boa dupla.”</p>
+                    <p>[NomeProtagonista]: “Valeu! Mas cuidado, eu ainda posso te superar!”</p>
+                    <button class="pular" onclick="goTo('escolhaFebatista4')"></button>
+                </div>
+            </section>
+
+            <section id="escolhaFebatista4">
+            <img class="Pdireita" src="../imagens/Personagens/Febatista.png" alt="Febatista">
+                <div class="falas">
+                    <p>Enquanto a música diminui um pouco, vocês se olham e riem, respirando juntos, o ritmo desacelerando ao redor.</p>
+                    <p>Febatista: “Sabe, dançar com você assim… até que não é tão ruim assim.”</p>
+                    <p>[NomeProtagonista]: “Concordo… Acho que podemos tornar essa noite inesquecível.”</p>
+                    <p>Febatista sorri e, num gesto espontâneo, se aproxima para um beijo leve e carinhoso.</p>
+                    <button class="pular" onclick="goTo('fim');trocarfundo('fundopreto')"></button>
+                </div>
+            </section>
+
+            <section id="escolhaCellbit1">
+            <img class="Pdireita" src="../imagens/Personagens/Cellbit.png" alt="Cellbit">
+                <div class="falas">
+                    <p>[NomeProtagonista]: “Ei, Cellbit! Que tal dançarmos um pouco? A pista tá animada!”</p>
+                    <p>Cellbit ergue a sobrancelha e solta uma risada discreta.</p>
+                    <p>Cellbit: “Você tá me chamando pra dançar mesmo? Hm… curioso. Tá confiante, hein.”</p>
+                    <button class="pular" onclick="goTo('escolhaCellbit2')"></button>
+                </div>
+            </section>
+
+            <section id="escolhaCellbit2">
+            <img class="Pdireita" src="../imagens/Personagens/Cellbit.png" alt="Cellbit">
+                <div class="falas">
+                    <p>Cellbit se aproxima, cruzando os braços e mantendo aquele olhar crítico, mas divertido.</p>
+                    <p>Cellbit: “Tá bem, vou aceitar seu desafio. Mas aviso: eu não perco o ritmo facilmente.”</p>
+                    <p>[NomeProtagonista]: “Ótimo! Vamos ver se você consegue acompanhar meu estilo.”</p>
+                    <button class="pular" onclick="goTo('escolhaCellbit3')"></button>
+                </div>
+            </section>
+
+            <section id="escolhaCellbit3">
+            <img class="Pdireita" src="../imagens/Personagens/Cellbit.png" alt="Cellbit">
+                <div class="falas">
+                    <p>Vocês entram na pista de dança, luzes coloridas piscando e a música batendo forte ao redor.</p>
+                    <p>Cellbit: “Hm… até que você se garante. Difícil acompanhar meus passos, mas divertido.”</p>
+                    <p>[NomeProtagonista]: “Não se preocupe, a diversão é garantida!”</p>
+                    <button class="pular" onclick="goTo('escolhaCellbit4')"></button>
+                </div>
+            </section>
+
+            <section id="escolhaCellbit4">
+            <img class="Pdireita" src="../imagens/Personagens/Cellbit.png" alt="Cellbit">
+                <div class="falas">
+                    <p>Enquanto a música diminui, vocês se olham por um instante, respirando juntos no meio da pista.</p>
+                    <p>Cellbit: “Sabe… dançar com você não é tão ruim quanto eu imaginava.”</p>
+                    <p>[NomeProtagonista]: “Concordo. Acho que podemos tornar essa noite memorável.”</p>
+                    <p>Cellbit dá um passo mais próximo, e num gesto inesperado, roça os lábios nos seus num beijo suave e carinhoso.</p>
+                    <button class="pular" onclick="goTo('fim');trocarfundo('fundopreto')"></button>
+                </div>
+            </section>
+
+            <section id="escolhaAuthentic1">
+            <img class="Pdireita" src="../imagens/Personagens/Authentic.png" alt="Authentic">
+                <div class="falas">
+                    <p>[NomeProtagonista]: “Ei, Authentic! Que tal dançarmos um pouco? A pista tá demais!”</p>
+                    <p>Authentic ergue o olhar, surpreso, e solta uma risada.</p>
+                    <p>Authentic: “Hahaha, você tá me chamando pra dançar? Tá se sentindo corajoso, hein!”</p>
+                    <button class="pular" onclick="goTo('escolhaAuthentic2')"></button>
+                </div>
+            </section>
+
+            <section id="escolhaAuthentic2">
+            <img class="Pdireita" src="../imagens/Personagens/Authentic.png" alt="Authentic">
+                <div class="falas">
+                    <p>Authentic se aproxima, apoiando a mão no seu ombro, ainda sorrindo.</p>
+                    <p>Authentic: “Tá bem, vou aceitar. Mas aviso que meus passos não são fáceis de acompanhar!”</p>
+                    <p>[NomeProtagonista]: “Então vamos ver se você consegue me acompanhar!”</p>
+                    <button class="pular" onclick="goTo('escolhaAuthentic3')"></button>
+                </div>
+            </section>
+
+            <section id="escolhaAuthentic3">
+            <img class="Pdireita" src="../imagens/Personagens/Authentic.png" alt="Authentic">
+                <div class="falas">
+                    <p>Vocês entram na pista, luzes coloridas piscando e a música pulsando. A energia ao redor deixa a dança ainda mais divertida.</p>
+                    <p>Authentic: “Hmm… você até que se garante. Difícil acompanhar, mas tá divertido!”</p>
+                    <p>[NomeProtagonista]: “Não se preocupe, o importante é curtir o momento!”</p>
+                    <button class="pular" onclick="goTo('escolhaAuthentic4')"></button>
+                </div>
+            </section>
+
+            <section id="escolhaAuthentic4">
+            <img class="Pdireita" src="../imagens/Personagens/Authentic.png" alt="Authentic">
+                <div class="falas">
+                    <p>Enquanto a música diminui, vocês se olham, o ambiente ao redor parece desacelerar.</p>
+                    <p>Authentic: “Sabe… dançar assim contigo até que não é tão ruim.”</p>
+                    <p>[NomeProtagonista]: “Concordo. Acho que essa noite vai ficar na memória.”</p>
+                    <p>Authentic sorri e se aproxima, trocando um beijo leve e carinhoso com você.</p>
+                    <button class="pular" onclick="goTo('fim');trocarfundo('fundopreto')"></button>
+                </div>
+            </section>
+
+            <section id="escolhaFelps1">
+            <img class="Pdireita" src="../imagens/Personagens/Felps.png" alt="Felps">
+                <div class="falas">
+                    <p>[NomeProtagonista]: “Ei, Felps! Bora dançar um pouco? A pista tá demais!”</p>
+                    <p>Felps ergue uma sobrancelha e solta uma risada animada.</p>
+                    <p>Felps: “Hahaha, você me chamando pra dançar? Tá ousado hoje, hein!”</p>
+                    <button class="pular" onclick="goTo('escolhaFelps2')"></button>
+                </div>
+            </section>
+
+            <section id="escolhaFelps2">
+            <img class="Pdireita" src="../imagens/Personagens/Felps.png" alt="Felps">
+                <div class="falas">
+                    <p>Felps se aproxima, sorrindo, e dá um leve empurrão amigável no seu ombro.</p>
+                    <p>Felps: “Tá bem, vou dançar com você. Mas aviso que meus passos são meio loucos, viu?”</p>
+                    <p>[NomeProtagonista]: “Perfeito! Quanto mais louco, mais divertido vai ser!”</p>
+                    <button class="pular" onclick="goTo('escolhaFelps3')"></button>
+                </div>
+            </section>
+
+            <section id="escolhaFelps3">
+            <img class="Pdireita" src="../imagens/Personagens/Felps.png" alt="Felps">
+                <div class="falas">
+                    <p>Vocês entram na pista, luzes piscando e música batendo forte. Felps começa a dançar, e você tenta acompanhar o ritmo divertido e contagiante dele.</p>
+                    <p>Felps: “Hahaha, olha só! Você até que se garante! Mas não vai me superar tão fácil assim.”</p>
+                    <p>[NomeProtagonista]: “Vamos ver se consigo! O importante é curtir a noite.”</p>
+                    <button class="pular" onclick="goTo('escolhaFelps4')"></button>
+                </div>
+            </section>
+
+            <section id="escolhaFelps4">
+            <img class="Pdireita" src="../imagens/Personagens/Felps.png" alt="Felps">
+                <div class="falas">
+                    <p>Enquanto a música diminui, vocês se olham, rindo, e o mundo ao redor parece desacelerar.</p>
+                    <p>Felps: “Sabe… dançar assim contigo… até que não é tão ruim!”</p>
+                    <p>[NomeProtagonista]: “Concordo. Essa noite vai ficar na memória.”</p>
+                    <p>Felps sorri e se aproxima, trocando um beijo leve e carinhoso com você.</p>
+                    <button class="pular" onclick="goTo('fim');trocarfundo('fundopreto')"></button>
+                </div>
+            </section>
+
+            <section id="escolhaJazz1">
+            <img class="Pdireita" src="../imagens/Personagens/Jazzghost.png" alt="Jazzghost">
+                <div class="falas">
+                    <p>[NomeProtagonista]: “Ei, Jazzghost! Que tal dançarmos um pouco? A pista tá animada!”</p>
+                    <p>Jazzghost olha pra você, sorrindo de lado, levantando uma sobrancelha com curiosidade.</p>
+                    <p>Jazzghost: “Hahaha, você me chamando pra dançar? Tá confiante hoje, hein!”</p>
+                    <button class="pular" onclick="goTo('escolhaJazz2')"></button>
+                </div>
+            </section>
+
+            <section id="escolhaJazz2">
+            <img class="Pdireita" src="../imagens/Personagens/Jazzghost.png" alt="Jazzghost">
+                <div class="falas">
+                    <p>Jazzghost se aproxima, apoiando a mão no seu ombro, com um sorriso divertido.</p>
+                    <p>Jazzghost: “Tá bem, aceito o desafio. Mas aviso que meus passos são imprevisíveis!”</p>
+                    <p>[NomeProtagonista]: “Perfeito! Quanto mais imprevisível, mais divertido vai ser!”</p>
+                    <button class="pular" onclick="goTo('escolhaJazz3')"></button>
+                </div>
+            </section>
+
+            <section id="escolhaJazz3">
+            <img class="Pdireita" src="../imagens/Personagens/Jazzghost.png" alt="Jazzghost">
+                <div class="falas">
+                    <p>Vocês entram na pista, luzes piscando e música pulsando forte. Jazzghost se move com leveza e ritmo, e você tenta acompanhar o estilo dele.</p>
+                    <p>Jazzghost: “Hahaha, olha só! Você até que se garante! Mas não vai me superar tão fácil assim.”</p>
+                    <p>[NomeProtagonista]: “Vamos ver! O importante é aproveitar cada momento.”</p>
+                    <button class="pular" onclick="goTo('escolhaJazz4')"></button>
+                </div>
+            </section>
+
+            <section id="escolhaJazz4">
+            <img class="Pdireita" src="../imagens/Personagens/Jazzghost.png" alt="Jazzghost">
+                <div class="falas">
+                    <p>Enquanto a música diminui, vocês se olham, rindo, e o ambiente ao redor parece desacelerar por alguns segundos.</p>
+                    <p>Jazzghost: “Sabe… dançar assim contigo… até que não é tão ruim!”</p>
+                    <p>[NomeProtagonista]: “Concordo. Acho que essa noite vai ficar na memória.”</p>
+                    <p>Jazzghost sorri e se aproxima, trocando um beijo leve e carinhoso com você.</p>
+                    <button class="pular" onclick="goTo('fim');trocarfundo('fundopreto')"></button>
+                </div>
+            </section>
+
+            <section id="escolhaMalena1">
+            <img class="Pdireita" src="../imagens/Personagens/Malena.png" alt="Malena">
+                <div class="falas">
+                    <p>[NomeProtagonista]: “Ei, Malena! Que tal dançarmos um pouco? A pista tá incrível!”</p>
+                    <p>Malena olha pra você, sorrindo, surpresa e divertida.</p>
+                    <p>Malena: “Hahaha, você me chamando pra dançar? Tá ousado hoje, hein!”</p>
+                    <button class="pular" onclick="goTo('escolhaMalena2')"></button>
+                </div>
+            </section>
+
+            <section id="escolhaMalena2">
+            <img class="Pdireita" src="../imagens/Personagens/Malena.png" alt="Malena">
+                <div class="falas">
+                    <p>Malena se aproxima, apoiando a mão no seu ombro com um sorriso divertido.</p>
+                    <p>Malena: “Tá bem, aceito. Mas aviso que meus passos são cheios de estilo, viu?”</p>
+                    <p>[NomeProtagonista]: “Perfeito! Quanto mais estilo, melhor!”</p>
+                    <button class="pular" onclick="goTo('escolhaMalena3')"></button>
+                </div>
+            </section>
+
+            <section id="escolhaMalena3">
+            <img class="Pdireita" src="../imagens/Personagens/Malena.png" alt="Malena">
+                <div class="falas">
+                    <p>Vocês entram na pista, luzes coloridas piscando e música batendo forte. Malena se move com ritmo e confiança, e você acompanha seus passos com diversão.</p>
+                    <p>Malena: “Hahaha, olha só! Você até que se garante! Mas vai precisar se esforçar pra me acompanhar!”</p>
+                    <p>[NomeProtagonista]: “Desafio aceito! Vamos aproveitar a noite ao máximo.”</p>
+                    <button class="pular" onclick="goTo('escolhaMalena4')"></button>
+                </div>
+            </section>
+
+            <section id="escolhaMalena4">
+            <img class="Pdireita" src="../imagens/Personagens/Malena.png" alt="Malena">
+                <div class="falas">
+                    <p>Enquanto a música diminui, vocês se olham e sorriem, a pista de dança parece desacelerar ao redor.</p>
+                    <p>Malena: “Sabe… dançar assim contigo… até que não é tão ruim.”</p>
+                    <p>[NomeProtagonista]: “Concordo. Acho que essa noite vai ficar na memória.”</p>
+                    <p>Malena se aproxima e troca um beijo leve e carinhoso com você.</p>
+                    <button class="pular" onclick="goTo('fim');trocarfundo('fundopreto')"></button>
+                </div>
+            </section>
+
+            <section id="escolhaMike1">
+            <img class="Pdireita" src="../imagens/Personagens/Mike.png" alt="Mike">
+                <div class="falas">
+                    <p>[NomeProtagonista]: “Ei, Mike! Que tal dançarmos um pouco? A pista tá demais!”</p>
+                    <p>Mike olha pra você, surpreso, mas logo solta um sorriso divertido.</p>
+                    <p>Mike: “Hahaha, você me chamando pra dançar? Tá confiante, hein! Vamos ver se consegue me acompanhar.”</p>
+                    <button class="pular" onclick="goTo('escolhaMike2')"></button>
+                </div>
+            </section>
+
+            <section id="escolhaMike2">
+            <img class="Pdireita" src="../imagens/Personagens/Mike.png" alt="Mike">
+                <div class="falas">
+                    <p>Mike se aproxima e apoia a mão no seu ombro, rindo levemente.</p>
+                    <p>Mike: “Tá bem, aceito dançar contigo. Mas aviso: meus passos podem ser imprevisíveis!”</p>
+                    <p>[NomeProtagonista]: “Perfeito! Quanto mais imprevisível, mais divertido vai ser!”</p>
+                    <button class="pular" onclick="goTo('escolhaMike3')"></button>
+                </div>
+            </section>
+
+            <section id="escolhaMike3">
+            <img class="Pdireita" src="../imagens/Personagens/Mike.png" alt="Mike">
+                <div class="falas">
+                    <p>Vocês entram na pista, luzes coloridas piscando e música pulsando. Mike se move com ritmo próprio, e você acompanha seus passos com diversão.</p>
+                    <p>Mike: “Hahaha, olha só! Você até que se garante! Mas não vai me superar tão fácil assim.”</p>
+                    <p>[NomeProtagonista]: “Vamos ver! O importante é aproveitar cada momento.”</p>
+                    <button class="pular" onclick="goTo('escolhaMike4')"></button>
+                </div>
+            </section>
+
+            <section id="escolhaMike4">
+            <img class="Pdireita" src="../imagens/Personagens/Mike.png" alt="Mike">
+                <div class="falas">
+                    <p>Enquanto a música diminui, vocês se olham e sorriem, a pista de dança parece desacelerar.</p>
+                    <p>Mike: “Sabe… dançar assim contigo… até que não é tão ruim.”</p>
+                    <p>[NomeProtagonista]: “Concordo. Acho que essa noite vai ficar na memória.”</p>
+                    <p>Mike se aproxima e troca um beijo leve e carinhoso com você.</p>
+                    <button class="pular" onclick="goTo('fim');trocarfundo('fundopreto')"></button>
+                </div>
+            </section>
+
+            <section id="escolhaPac1">
+            <img class="Pdireita" src="../imagens/Personagens/Pac.png" alt="Pac">
+                <div class="falas">
+                    <p>[NomeProtagonista]: “Ei, Pac! Que tal dançarmos um pouco? A pista tá demais!”</p>
+                    <p>Pac olha pra você, surpreso, mas logo solta um sorriso divertido.</p>
+                    <p>Pac: “Hahaha, você me chamando pra dançar? Tá confiante, hein! Vamos ver se você consegue me acompanhar.”</p>
+                    <button class="pular" onclick="goTo('escolhaPac2')"></button>
+                </div>
+            </section>
+
+            <section id="escolhaPac2">
+            <img class="Pdireita" src="../imagens/Personagens/Pac.png" alt="Pac">
+                <div class="falas">
+                    <p>Pac se aproxima e dá um leve empurrão amigável no seu ombro, rindo.</p>
+                    <p>Pac: “Tá bem, aceito dançar contigo. Mas aviso: meus passos podem ser meio loucos!”</p>
+                    <p>[NomeProtagonista]: “Perfeito! Quanto mais louco, mais divertido vai ser!”</p>
+                    <button class="pular" onclick="goTo('escolhaPac3')"></button>
+                </div>
+            </section>
+
+            <section id="escolhaPac3">
+            <img class="Pdireita" src="../imagens/Personagens/Pac.png" alt="Pac">
+                <div class="falas">
+                    <p>Vocês entram na pista, luzes coloridas piscando e música pulsando. Pac se move com ritmo próprio, e você acompanha seus passos com diversão.</p>
+                    <p>Pac: “Hahaha, olha só! Você até que se garante! Mas vai precisar se esforçar pra me acompanhar!”</p>
+                    <p>[NomeProtagonista]: “Desafio aceito! Vamos aproveitar a noite ao máximo.”</p>
+                    <button class="pular" onclick="goTo('escolhaPac4')"></button>
+                </div>
+            </section>
+
+            <section id="escolhaPac4">
+            <img class="Pdireita" src="../imagens/Personagens/Pac.png" alt="Pac">
+                <div class="falas">
+                    <p>Enquanto a música diminui, vocês se olham e sorriem, a pista de dança parece desacelerar por alguns segundos.</p>
+                    <p>Pac: “Sabe… dançar assim contigo… até que não é tão ruim.”</p>
+                    <p>[NomeProtagonista]: “Concordo. Essa noite vai ficar na memória.”</p>
+                    <p>Pac se aproxima e troca um beijo leve e carinhoso com você, sorrindo depois do gesto.</p>
+                    <button class="pular" onclick="goTo('fim');trocarfundo('fundopreto')"></button>
+                </div>
+            </section>
+
+            <section id="escolhaRezende1">
+            <img class="Pdireita" src="../imagens/Personagens/Rezendeevil.png" alt="Rezende">
+                <div class="falas">
+                    <p>[NomeProtagonista]: “Ei, Rezende! Bora dançar um pouco? A pista tá demais!”</p>
+                    <p>Rezende olha pra você, surpreso, mas logo solta um sorriso divertido.</p>
+                    <p>Rezende: “Hahaha, você me chamando pra dançar? Tá confiante hoje, hein! Vamos ver se consegue me acompanhar.”</p>
+                    <button class="pular" onclick="goTo('escolhaRezende2')"></button>
+                </div>
+            </section>
+
+            <section id="escolhaRezende2">
+            <img class="Pdireita" src="../imagens/Personagens/Rezendeevil.png" alt="Rezende">
+                <div class="falas">
+                    <p>Rezende se aproxima, dando um leve empurrão amigável no seu ombro, rindo.</p>
+                    <p>Rezende: “Tá bem, aceito dançar contigo. Mas aviso: meus passos podem ser imprevisíveis!”</p>
+                    <p>[NomeProtagonista]: “Perfeito! Quanto mais imprevisível, mais divertido vai ser!”</p>
+                    <button class="pular" onclick="goTo('escolhaRezende3')"></button>
+                </div>
+            </section>
+
+            <section id="escolhaRezende3">
+            <img class="Pdireita" src="../imagens/Personagens/Rezendeevil.png" alt="Rezende">
+                <div class="falas">
+                    <p>Vocês entram na pista, luzes coloridas piscando e música pulsando. Rezende se move com ritmo próprio, e você acompanha seus passos com diversão.</p>
+                    <p>Rezende: “Hahaha, olha só! Você até que se garante! Mas vai precisar se esforçar pra me acompanhar!”</p>
+                    <p>[NomeProtagonista]: “Desafio aceito! Vamos aproveitar a noite ao máximo.”</p>
+                    <button class="pular" onclick="goTo('escolhaRezende4')"></button>
+                </div>
+            </section>
+
+            <section id="escolhaRezende4">
+            <img class="Pdireita" src="../imagens/Personagens/Rezendeevil.png" alt="Rezende">
+                <div class="falas">
+                    <p>Enquanto a música diminui, vocês se olham e sorriem, a pista de dança parece desacelerar por alguns segundos.</p>
+                    <p>Rezende: “Sabe… dançar assim contigo… até que não é tão ruim.”</p>
+                    <p>[NomeProtagonista]: “Concordo. Essa noite vai ficar na memória.”</p>
+                    <p>Rezende se aproxima e troca um beijo leve e carinhoso com você, sorrindo depois do gesto.</p>
+                    <button class="pular" onclick="goTo('fim');trocarfundo('fundopreto')"></button>
+                </div>
+            </section>
+
+            <section id="escolhaSpok1">
+            <img class="Pdireita" src="../imagens/Personagens/Spok.png" alt="Spok">
+                <div class="falas">
+                    <p>[NomeProtagonista]: “Ei, Spok! Que tal dançarmos um pouco? A pista tá incrível!”</p>
+                    <p>Spok olha pra você, surpreso, mas logo solta um sorriso divertido.</p>
+                    <p>Spok: “Hahaha, você me chamando pra dançar? Tá confiante, hein! Vamos ver se consegue me acompanhar.”</p>
+                    <button class="pular" onclick="goTo('escolhaSpok2')"></button>
+                </div>
+            </section>
+
+            <section id="escolhaSpok2">
+            <img class="Pdireita" src="../imagens/Personagens/Spok.png" alt="Spok">
+                <div class="falas">
+                    <p>Spok se aproxima, apoiando a mão no seu ombro e rindo levemente.</p>
+                    <p>Spok: “Tá bem, aceito dançar contigo. Mas aviso: meus passos são meio imprevisíveis!”</p>
+                    <p>[NomeProtagonista]: “Perfeito! Quanto mais imprevisível, mais divertido vai ser!”</p>
+                    <button class="pular" onclick="goTo('escolhaSpok3')"></button>
+                </div>
+            </section>
+
+            <section id="escolhaSpok3">
+            <img class="Pdireita" src="../imagens/Personagens/Spok.png" alt="Spok">
+                <div class="falas">
+                    <p>Vocês entram na pista, luzes coloridas piscando e música pulsando. Spok se move com ritmo próprio, e você acompanha seus passos com diversão.</p>
+                    <p>Spok: “Hahaha, olha só! Você até que se garante! Mas vai precisar se esforçar pra me acompanhar!”</p>
+                    <p>[NomeProtagonista]: “Desafio aceito! Vamos aproveitar a noite ao máximo.”</p>
+                    <button class="pular" onclick="goTo('escolhaSpok4')"></button>
+                </div>
+            </section>
+
+            <section id="escolhaSpok4">
+            <img class="Pdireita" src="../imagens/Personagens/Spok.png" alt="Spok">
+                <div class="falas">
+                    <p>Enquanto a música diminui, vocês se olham e sorriem, a pista de dança parece desacelerar por alguns segundos.</p>
+                    <p>Spok: “Sabe… dançar assim contigo… até que não é tão ruim.”</p>
+                    <p>[NomeProtagonista]: “Concordo. Essa noite vai ficar na memória.”</p>
+                    <p>Spok se aproxima e troca um beijo leve e carinhoso com você, sorrindo depois do gesto.</p>
+                    <button class="pular" onclick="goTo('fim');trocarfundo('fundopreto')"></button>
+                </div>
+            </section>
+
+            <section id="fim">
+            <img class="Pmeio" src="../imagens/Personagens/Steve.png" alt="Spok">
+                <div class="falas">
+                    E essa é a minha história.
+                </div>
+            </section>
+
+
+            <script src="javascript.js"></script>
+</body>
+
+</html>

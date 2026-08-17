@@ -1,0 +1,540 @@
+body{
+    background-image: url(../imagens/Fundo/Plano.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+*{margin: 0; padding: 0;}
+
+.atributos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 225px;
+    width: 190px;
+    background-color: rgb(180, 178, 149);
+    margin: 2px;
+    border: solid;
+    border-color: rgb(0, 0, 0);
+    font-size: 13px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.atu{
+    display: flex;
+    flex-flow: column;
+}
+
+.barra {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #e07ed3, #d61385);
+    border-radius: 15px 0 0 15px;
+    transition: width 0.4s ease;
+  }
+
+.barra-container {
+    width: 80px;
+    height: 12px;
+    background-color: #ddd;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 4px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+
+
+.dopçao{
+    display: flex;  
+    flex-flow: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.entrada{
+    background-image: url(../imagens/fundo/entrada.png);
+    background-size: cover;
+}
+
+.falas{
+    position: relative;
+    background: radial-gradient(rgb(121, 116, 116),rgb(67, 67, 67));
+    height: 180px;
+    width: 987px;
+    border: solid rgb(0, 0, 0);
+    border-width: 3px;
+    border-bottom: 0px;
+    text-align: center;
+    z-index: 2;
+    padding: 4px;
+    font-size: 22px;
+}
+
+.fileira{
+    display: flex;
+    height: 200px;
+    width: 400px;
+    flex-flow: row;
+    justify-content: space-between;
+
+}
+
+
+.img_hist{
+    display: flex;
+    margin-right: 125px;
+    margin-top: 50px;
+}
+
+.info{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+}
+
+.itens{
+    display: flex;
+    height: 188px;
+    width: 188px;
+    margin: 3px;
+    border: solid;
+    border-color: rgb(0, 0, 0);
+}
+
+
+.fundo_log{
+    background-color: rgb(146, 39, 39);
+}
+
+.menu li {
+    list-style-type: none;
+    width: 200px;
+    height: 35px;
+    text-align: center;
+    background-color: #2b961d;
+    box-sizing: border-box;
+    border: 5px solid #024d06;
+    cursor: pointer;
+    margin: 5px;
+    padding-left: -4px; 
+}
+
+.menu li:hover {
+    background: #024d06;
+    border: 5px solid #092206;
+    color: white
+}
+
+.menu li:hover > ul {
+    display: block;
+}
+
+.menu table{
+    padding-bottom: 150px;
+}
+
+.menu tr{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu ul {
+    display: none;
+    margin-top: 0.5px;
+}
+
+.opçao{
+    width: 400px;
+    height: 60px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: #363b3b;
+    color: white;
+    border-radius: 2px;
+    border: solid black;
+    cursor: pointer;
+    padding: 2px;
+    margin: 10px;
+    margin-top: 40px;
+    padding-left: -4px; 
+}
+
+.Pdireita{
+    width: 200px;
+    height: 400px;
+    margin-left: 500px; 
+    margin-bottom: -100px;
+    transform: scaleX(-1);
+}
+
+.Pesquerda{
+    width: 200px;
+    height: 400px;
+    margin-left: -500px; 
+    margin-bottom: -100px;
+}
+
+.Pmeio{
+    width: 200px;
+    height: 400px; 
+    margin-bottom: -100px;
+    transform: scaleX(-1);
+}
+
+
+
+.Pmen{
+    width: 50px;
+    height: 130px;
+    margin: 20px;
+    margin-left: 10px;
+}
+
+.pular{
+    position: absolute;
+    bottom: 5px;
+    right: 2px;
+    width: 45px;
+    height: 35px;
+    background-color: rgba(83, 82, 82, 0);
+    background-image: url('../imagens/seta.png');
+    background-size: cover;
+    border: none;
+    border-radius: 30px;
+}
+
+.statusp{
+    display: flex;
+    height: 235px;
+    width: 400px;
+    flex-flow: row;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.tabela img{
+    width: 60%;
+}
+
+.tabela p{
+    text-align: center;
+}
+
+.tabela td{
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px;
+    margin: px;
+}
+
+.tela_creditos{
+    display: flex;
+    height: 650px;
+    width: 1000px;
+    background-image: url(../imagens/fundo/fundo_casa.png);
+    justify-content: space-between;
+    flex-flow: column;
+    
+    
+}
+
+.tela_hist {
+    display: flex;
+    height: 650px;
+    width: 1000px;
+    background-image: url(../imagens/Fundo/fundo_casa.png);
+    justify-content: center;
+    align-items: center;
+}
+
+.tela_menu{
+    display: flex;
+    height: 650px;
+    width: 1000px;
+    background-image: url(../imagens/fundo/fundo_casa.png);
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.texto_hist {
+    height: 500px;
+    width: 500px;
+    background-color: white;
+    border: 10px solid white;
+    border-radius: 10px; 
+}
+
+button{
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+
+ a{
+    color: black;
+    text-decoration: none;
+    display: block;
+ }
+
+#container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    position: relative;
+}
+
+.container2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+}
+
+#dinheiro{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: -120px;
+    left: 0px;
+}
+
+thead th{
+    margin: 100px;
+}
+
+#tela_jogo{
+    display: flex;
+    height: 650px;
+    width: 1000px;
+    flex-flow: column;
+    justify-content: flex-end;
+    align-items: center;
+    border: 4px solid black;
+    order: 2;
+    position:relative
+  
+}
+
+#loja{
+    display: flex;
+    height: 800px;
+    width: 400px;
+    flex-flow: column;
+    justify-content: space-around;
+    border: 5px solid black;
+    background-color:#746a6a;
+    order: 1;
+    position: relative;
+}
+
+#moedas{
+    font-size: 50px;
+    position: absolute;
+    top: 40px;
+    left: 140px;
+    color: #1e8011;
+}
+
+#atualmente{
+    display: flex;
+    height: 800px;
+    width: 400px;
+    flex-flow: column;
+    justify-content: flex;
+    border: 5px solid black;
+    background-color: #746a6a;
+    order: 3;
+    position: relative;
+}
+
+#atualmente2{
+    display: none;
+    height: 800px;
+    width: 400px;
+    flex-flow: column;
+    justify-content: flex-start;
+    border: solid black;
+    border-width: 2px;
+    position: relative;
+}
+
+#atualmente4{
+    display: none;
+    height: 800px;
+    width: 400px;
+    flex-flow: column;
+    justify-content: flex-start;
+    border: solid black;
+    border-width: 2px;
+    position: relative;
+}
+
+
+
+#log {
+    position: absolute;
+    bottom: -62px;
+    left: -4px;
+    padding: 10px 40px;
+    font-size: 24px;
+    z-index: 9999;
+    background-color: #353232;
+    color: white;
+}
+
+
+#logContainer {
+    width: 94%;
+    height: 80vh; 
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.4);
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+#nome{
+    text-align: center; 
+    background-color: white; 
+    height: 25px; 
+    font-size: 20px;
+
+}
+
+#tela_log {
+    font-size: 18px;
+    color: white;
+}
+
+#voltar_log{
+    padding: 8px;
+    font-size: 16px;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 6px;
+}
+
+input::placeholder {
+  color: white;
+}
+
+.voltar{
+    width: 10%;
+    display: flex;
+    align-self: flex-end;
+    justify-content: flex-end;
+}
+
+
+
+h1{
+    text-align: center;
+    padding-top: 10px;
+}
+
+ section {
+            display: none;
+        }
+
+#b1{
+    width: 100px;
+    height: 30px;
+    background-image: radial-gradient(rgb(82, 75, 75),rgb(46, 46, 49));
+    color: white;
+}
+
+#b2{
+    width: 100px;
+    height: 30px;
+    background-image: radial-gradient(rgb(82, 75, 75),rgb(46, 46, 49));
+    color: white;
+}
+
+#b3{
+    width: 100px;
+    height: 30px;
+    background-image: radial-gradient(rgb(82, 75, 75),rgb(46, 46, 49));
+    color: white;
+}
+
+#b4{
+    width: 100px;
+    height: 30px;
+    background-image: radial-gradient(rgb(82, 75, 75),rgb(46, 46, 49));
+    color: white;
+}
+
+#b5{
+    width: 100px;
+    height: 30px;
+    background-image: radial-gradient(rgb(82, 75, 75),rgb(46, 46, 49));
+    color: white;
+}
+
+#b6{
+    width: 100px;
+    height: 30px;
+    background-image: radial-gradient(rgb(82, 75, 75),rgb(46, 46, 49));
+    color: white;
+}
+
+#b7{
+    width: 100px;
+    height: 30px;
+    background-image: radial-gradient(rgb(82, 75, 75),rgb(46, 46, 49));
+    color: white;
+}
+
+#b8{
+    width: 100px;
+    height: 30px;
+    background-image: radial-gradient(rgb(82, 75, 75),rgb(46, 46, 49));
+    color: white;
+}
+
+#b9{
+    width: 100px;
+    height: 30px;
+    background-image: radial-gradient(rgb(82, 75, 75),rgb(46, 46, 49));
+    color: white;
+}
+
+#b10{
+    width: 100px;
+    height: 30px;
+    background-image: radial-gradient(rgb(82, 75, 75),rgb(46, 46, 49));
+    color: white;
+}
+
+#fin{
+
+    display: flex;
+    height: 650px;
+    width: 1000px;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+#escolhaP{
+    width: 120px;
+    height: 320px;
+    background-color: #505750;
+    display: flex;
+    border: solid black 1px;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+}
+
